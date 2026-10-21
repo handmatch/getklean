@@ -702,7 +702,7 @@ function booked() {
       <div class="conf-actions">
         <a class="btn contained lg pill" href="#/" id="done">View my booking</a>
         <a class="btn outlined lg pill dark" id="ics" href="#" download="getklean-booking.ics">Add to calendar</a>
-        <a class="btn outlined lg pill dark" href="https://m.me/getkleanph" target="_blank" rel="noopener">Contact us</a>
+        <a class="btn outlined lg pill dark" href="https://m.me/getklean.housemaids" target="_blank" rel="noopener">Contact us</a>
       </div>
     </div>`,
   })}`;

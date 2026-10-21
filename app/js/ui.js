@@ -42,7 +42,7 @@ export function footer() {
       <div class="footer-brand">
         <a href="#/" style="width:180px;height:40px">${logo('white')}</a>
         <p class="body2">Trusted, insured housemaids, aircon and home cleaning in Metro Manila.</p>
-        <a class="btn yellow md" href="https://m.me/getkleanph" target="_blank" rel="noopener">Chat on Messenger</a>
+        <a class="btn yellow md" href="https://m.me/getklean.housemaids" target="_blank" rel="noopener">Chat on Messenger</a>
       </div>
       ${col('Services', ['Housemaid on-demand', 'Aircon cleaning', 'Deep cleaning', 'Flexi plans'])}
       ${col('Help', ['How it works', 'FAQs', 'Contact us', 'Service areas'])}
