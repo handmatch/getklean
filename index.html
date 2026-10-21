@@ -40,22 +40,10 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Housemaids on demand · Metro Manila</p>
+          <p class="eyebrow">Home services · Metro Manila</p>
           <h1 class="display">Your space,<br><span class="y">reclaimed.</span></h1>
-          <p class="lead">Book a vetted, trained and insured housemaid for a half day or a whole day. See your price before you pay, and swap anytime for free.</p>
+          <p class="lead">Vetted, trained and insured help for your home: housemaids by the day, aircon cleaning and deep cleaning. See your price before you pay.</p>
 
-          <form class="quick" id="quick" aria-label="Quick booking">
-            <label class="q-field"><span>Where</span>
-              <select id="q-where" required>
-                <option value="" selected disabled>Choose your area</option>
-                <option>Metro Manila</option><option>Bulacan</option><option>Rizal</option>
-              </select></label>
-            <label class="q-field"><span>When</span><input type="date" id="q-when"></label>
-            <label class="q-field"><span>How long</span>
-              <select id="q-dur"><option value="whole">Whole day · 8 hrs</option><option value="half">Half day · 4 hrs</option></select></label>
-            <button class="btn navy lg" type="submit">See housemaids <span class="ic">arrow_forward</span></button>
-          </form>
-          <p class="fine">First booking on a weekday? Try us for <b>PHP650</b> instead of PHP1,200.</p>
         </div>
 
         <div class="hero-art" aria-hidden="true">
@@ -64,6 +52,45 @@
           <div class="card c2"><span class="ic fill">star</span><div><b>4.8 / 5</b><small>Average housemaid rating</small></div></div>
           <div class="card c3"><span class="ic fill">autorenew</span><div><b>Free replacement</b><small>Not the right fit? We swap, no fees</small></div></div>
           <div class="big-g">g</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="finder" id="book">
+          <div class="svc-tabs" role="tablist" aria-label="Choose a service">
+            <button class="svc on" role="tab" aria-selected="true" aria-controls="f-housemaid" id="t-housemaid" data-svc="housemaid"><span class="svc-ic"><span class="ic">cleaning_services</span></span><b>Housemaid On-Demand</b></button>
+            <button class="svc" role="tab" aria-selected="false" aria-controls="f-aircon" id="t-aircon" data-svc="aircon" tabindex="-1"><span class="svc-ic"><span class="ic">ac_unit</span></span><b>Aircon Cleaning</b></button>
+            <button class="svc" role="tab" aria-selected="false" aria-controls="f-deep" id="t-deep" data-svc="deep" tabindex="-1"><span class="svc-ic"><span class="ic">mop</span></span><b>Deep Cleaning</b></button>
+            <button class="svc" role="tab" aria-selected="false" aria-controls="f-flexi" id="t-flexi" data-svc="flexi" tabindex="-1"><span class="svc-ic"><span class="ic">workspace_premium</span></span><b>Flexi Plans</b></button>
+          </div>
+
+          <form class="svc-form" id="f-housemaid" role="tabpanel" aria-labelledby="t-housemaid" data-svc="housemaid" novalidate>
+            <label class="q-field"><span>Where</span><select name="where" required><option value="" selected disabled>Choose your area</option><option>Metro Manila</option><option>Bulacan</option><option>Rizal</option></select></label>
+            <label class="q-field"><span>When</span><input type="date" name="when" required></label>
+            <label class="q-field"><span>How long</span><select name="dur"><option value="whole">Whole day · 8 hrs</option><option value="half">Half day · 4 hrs</option></select></label>
+            <button class="btn navy lg" type="submit">Find a housemaid <span class="ic">arrow_forward</span></button>
+            <p class="f-note">First booking on a weekday? <b>PHP650</b> instead of PHP1,200.</p>
+          </form>
+
+          <form class="svc-form" id="f-aircon" role="tabpanel" aria-labelledby="t-aircon" data-svc="aircon" hidden novalidate>
+            <label class="q-field"><span>Where</span><select name="where" required><option value="" selected disabled>Choose your area</option><option>Metro Manila</option><option>Bulacan</option><option>Rizal</option></select></label>
+            <label class="q-field"><span>How many aircon units?</span><select name="units"><option>1 unit</option><option>2 units</option><option>3 units</option><option>4 units</option><option>5+ units</option></select></label>
+            <button class="btn navy lg" type="submit">Book now <span class="ic">arrow_forward</span></button>
+            <p class="f-note">Ready for El Niño: better cooling, cleaner air, higher efficiency.</p>
+          </form>
+
+          <form class="svc-form" id="f-deep" role="tabpanel" aria-labelledby="t-deep" data-svc="deep" hidden novalidate>
+            <label class="q-field"><span>Where</span><select name="where" required><option value="" selected disabled>Choose your area</option><option>Metro Manila</option><option>Bulacan</option><option>Rizal</option></select></label>
+            <label class="q-field"><span>Home size</span><select name="size"><option>Studio</option><option>1 bedroom</option><option>2 bedrooms</option><option>3+ bedrooms</option><option>House</option></select></label>
+            <button class="btn navy lg" type="submit">Book now <span class="ic">arrow_forward</span></button>
+            <p class="f-note">Top-to-bottom clean for move-ins, move-outs and fresh starts.</p>
+          </form>
+
+          <form class="svc-form" id="f-flexi" role="tabpanel" aria-labelledby="t-flexi" data-svc="flexi" hidden novalidate>
+            <label class="q-field"><span>Plan length</span><select name="plan"><option value="1m">1 month · PHP1,790</option><option value="3m" selected>3 months · PHP4,990</option><option value="6m">6 months · PHP8,490</option><option value="12m">Annual · PHP13,990</option></select></label>
+            <label class="q-field"><span>Visits per month</span><select name="per"><option>2</option><option>4</option><option selected>6</option><option>8</option><option>12</option></select></label>
+            <button class="btn navy lg" type="submit">See my savings <span class="ic">arrow_forward</span></button>
+            <p class="f-note">Member rates from PHP510 a visit while your plan is active.</p>
+          </form>
         </div>
       </div>
       <div class="container stats">
@@ -87,7 +114,7 @@
               <li><span class="ic">air</span>Cleaner air</li>
               <li><span class="ic">device_thermostat</span>Higher efficiency</li>
             </ul>
-            <a class="btn navy lg" href="https://m.me/getkleanph?ref=aircon-el-nino" target="_blank" rel="noopener">Book now <span class="ic">arrow_forward</span></a>
+            <a class="btn navy lg" href="#book-aircon">Book now <span class="ic">arrow_forward</span></a>
           </div>
           <div class="banner-photo"><img src="img/aircon-el-nino.jpg" alt="A woman sitting on her bed, sweating in the heat" width="1080" height="640" loading="lazy"></div>
         </div>
