@@ -19,6 +19,16 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <div class="hotbar" role="region" aria-label="Hotlines">
+    <div class="container hotbar-in">
+      <span class="hb-lbl"><span class="ic fill">call</span>Hotlines</span>
+      <span>Housemaid <a class="" href="tel:+639674753848">(0967) 475-3848</a></span>
+      <span>Aircon <a class="" href="tel:+639317288845">(0931) 728-8845</a></span>
+      <span>Deep cleaning <a class="" href="tel:+639674753848">(0967) 475-3848</a></span>
+      <a class="hb-mail" href="mailto:sales@getkleanph.com">sales@getkleanph.com</a>
+    </div>
+  </div>
+
   <header class="top" id="top">
     <div class="container top-in">
       <a href="./" class="brand" aria-label="Getklean home"><img src="brand/logo-on-blue.png" alt="Getklean · Your space, reclaimed" width="192" height="42"></a>
@@ -70,6 +80,7 @@
             <label class="q-field"><span>How long</span><select name="dur"><option value="whole">Whole day · 8 hrs</option><option value="half">Half day · 4 hrs</option></select></label>
             <button class="btn navy lg" type="submit">Find a housemaid <span class="ic">arrow_forward</span></button>
             <p class="f-note">First booking on a weekday? <b>PHP650</b> instead of PHP1,200.</p>
+            <a class="f-call" href="tel:+639674753848"><span class="ic fill">call</span><span>Prefer to call? <b>Housemaid hotline (0967) 475-3848</b></span></a>
           </form>
 
           <form class="svc-form" id="f-aircon" role="tabpanel" aria-labelledby="t-aircon" data-svc="aircon" hidden novalidate>
@@ -77,6 +88,7 @@
             <label class="q-field"><span>How many aircon units?</span><select name="units"><option>1 unit</option><option>2 units</option><option>3 units</option><option>4 units</option><option>5+ units</option></select></label>
             <button class="btn navy lg" type="submit">Book now <span class="ic">arrow_forward</span></button>
             <p class="f-note">Ready for El Niño: better cooling, cleaner air, higher efficiency.</p>
+            <a class="f-call" href="tel:+639317288845"><span class="ic fill">call</span><span>Prefer to call? <b>Aircon hotline (0931) 728-8845</b></span></a>
           </form>
 
           <form class="svc-form" id="f-deep" role="tabpanel" aria-labelledby="t-deep" data-svc="deep" hidden novalidate>
@@ -84,6 +96,7 @@
             <label class="q-field"><span>Home size</span><select name="size"><option>Studio</option><option>1 bedroom</option><option>2 bedrooms</option><option>3+ bedrooms</option><option>House</option></select></label>
             <button class="btn navy lg" type="submit">Book now <span class="ic">arrow_forward</span></button>
             <p class="f-note">Top-to-bottom clean for move-ins, move-outs and fresh starts.</p>
+            <a class="f-call" href="tel:+639674753848"><span class="ic fill">call</span><span>Prefer to call? <b>Deep cleaning hotline (0967) 475-3848</b></span></a>
           </form>
 
           <form class="svc-form" id="f-flexi" role="tabpanel" aria-labelledby="t-flexi" data-svc="flexi" hidden novalidate>
@@ -91,6 +104,7 @@
             <label class="q-field"><span>Visits per month</span><select name="per"><option>2</option><option>4</option><option selected>6</option><option>8</option><option>12</option></select></label>
             <button class="btn navy lg" type="submit">See my savings <span class="ic">arrow_forward</span></button>
             <p class="f-note">Member rates from PHP510 a visit while your plan is active.</p>
+            <a class="f-call" href="tel:+639674753848"><span class="ic fill">call</span><span>Prefer to call? <b>Housemaid hotline (0967) 475-3848</b></span></a>
           </form>
         </div>
       </div>
@@ -115,7 +129,7 @@
               <li><span class="ic">air</span>Cleaner air</li>
               <li><span class="ic">device_thermostat</span>Higher efficiency</li>
             </ul>
-            <a class="btn navy lg" href="#book-aircon">Book now <span class="ic">arrow_forward</span></a>
+            <div class="b-actions"><a class="btn navy lg" href="#book-aircon">Book now <span class="ic">arrow_forward</span></a><a class="b-call" href="tel:+639317288845"><span class="ic fill">call</span>or call (0931) 728-8845</a></div>
           </div>
           <div class="banner-photo"><img src="img/aircon-el-nino.jpg" alt="A woman sitting on her bed, sweating in the heat" width="1080" height="640" loading="lazy"></div>
         </div>
@@ -222,7 +236,7 @@
     <section class="sec" id="faq">
       <div class="container faq">
         <div><p class="kicker">FAQ</p><h2 class="h2">Good to know.</h2>
-          <p class="sub">Still have a question? <a href="https://m.me/getkleanph" target="_blank" rel="noopener">Chat with us on Messenger</a>.</p></div>
+          <p class="sub">Still have a question? Call us: housemaid <a class="" href="tel:+639674753848">(0967) 475-3848</a>, aircon <a class="" href="tel:+639317288845">(0931) 728-8845</a>. Or <a href="https://m.me/getkleanph" target="_blank" rel="noopener">chat on Messenger</a>.</p></div>
         <div class="qa">
           <details><summary>Can I book for today?</summary><p>Yes. Choose “Book now” and pick today or tomorrow. Start times run from 7:00AM to 3:00PM.</p></details>
           <details><summary>What’s the difference between half day and whole day?</summary><p>Half day is 4 hours of service. Whole day is 8 hours: 7 hours of service plus a 1-hour break.</p></details>
@@ -250,11 +264,26 @@
         <a class="btn yellow" href="https://m.me/getkleanph" target="_blank" rel="noopener"><span class="ic">chat</span> Chat on Messenger</a>
       </div>
       <nav aria-label="Services"><p>Services</p><a href="app/#/book/when">Housemaid on-demand</a><a href="#pricing">Flexi Plans</a><a href="#services">What we do</a></nav>
-      <nav aria-label="Help"><p>Help</p><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="https://m.me/getkleanph" target="_blank" rel="noopener">Contact us</a></nav>
-      <nav aria-label="Account"><p>Account</p><a href="app/#/sign-in">Sign in</a><a href="app/#/book/when">Book a housemaid</a></nav>
+      <nav aria-label="Help"><p>Help</p><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="app/#/sign-in">Sign in</a><a href="https://www.facebook.com/getklean.housemaids" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/getkleanofficial" target="_blank" rel="noopener">Instagram</a></nav>
+      <div class="foot-hot"><p>Hotlines</p>
+        <a href="tel:+639674753848"><small>Housemaid On-Demand</small>(0967) 475-3848</a>
+        <a href="tel:+639317288845"><small>Aircon Cleaning</small>(0931) 728-8845</a>
+        <a href="tel:+639674753848"><small>Deep &amp; Professional Cleaning</small>(0967) 475-3848</a>
+        <a href="mailto:sales@getkleanph.com"><small>Email</small>sales@getkleanph.com</a>
+      </div>
     </div>
     <div class="container legal">© <span id="yr">2026</span> GetKleanPH. All rights reserved.</div>
   </footer>
+
+  <button class="call-fab" aria-haspopup="dialog" aria-controls="call-sheet"><span class="ic fill">call</span>Call us</button>
+  <div class="call-sheet" id="call-sheet" role="dialog" aria-modal="true" aria-label="Call a hotline" hidden>
+    <div class="cs-card">
+      <div class="cs-head"><b>Call a hotline</b><button class="cs-x" aria-label="Close"><span class="ic">close</span></button></div>
+      <a href="tel:+639674753848"><span class="ic">cleaning_services</span><span><small>Housemaid On-Demand</small>(0967) 475-3848</span></a>
+      <a href="tel:+639317288845"><span class="ic">ac_unit</span><span><small>Aircon Cleaning</small>(0931) 728-8845</span></a>
+      <a href="tel:+639674753848"><span class="ic">mop</span><span><small>Deep &amp; Professional Cleaning</small>(0967) 475-3848</span></a>
+    </div>
+  </div>
 
   <script src="site.js" defer></script>
 </body>

@@ -46,6 +46,10 @@ export function footer() {
       </div>
       ${col('Services', ['Housemaid on-demand', 'Aircon cleaning', 'Deep cleaning', 'Flexi plans'])}
       ${col('Help', ['How it works', 'FAQs', 'Contact us', 'Service areas'])}
+      <div class="footer-col"><p class="overline">Hotlines</p>
+        <a href="tel:+639674753848">Housemaid (0967) 475-3848</a>
+        <a href="tel:+639317288845">Aircon (0931) 728-8845</a>
+        <a href="mailto:sales@getkleanph.com">sales@getkleanph.com</a></div>
       ${col('Company', ['About GetKlean', 'Terms', 'Privacy'])}
     </div>
     <div class="legal">© 2026 GetKleanPH. All rights reserved.</div>
@@ -145,7 +149,8 @@ export function summary() {
     <div class="total"><span class="body1">Total to pay</span><span class="amt">${php(total(s))}</span></div>
     ${fee ? `<p class="caption muted">Your membership is charged once today and is valid for ${PLANS[s.plan].months} month${PLANS[s.plan].months > 1 ? 's' : ''}. You can extend or upgrade your membership anytime.</p>` : ''}`;
   }
-  return `<aside class="summary" aria-label="Your booking"><h2 class="h6">Your booking</h2><div class="sum-rows">${rows.join('')}</div>${breakdown}</aside>`;
+  return `<aside class="summary" aria-label="Your booking"><h2 class="h6">Your booking</h2><div class="sum-rows">${rows.join('')}</div>${breakdown}
+    <a class="sum-help" href="tel:+639674753848">${icon('call', 's20 fill')}<span>Need help booking? Call <b>(0967) 475-3848</b></span></a></aside>`;
 }
 export const shortName = n => { const p = n.split(' '); return p.length > 1 ? `${p[0]} ${p[p.length - 1][0]}.` : n; };
 export function addressLine(a) {

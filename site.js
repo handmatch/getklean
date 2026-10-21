@@ -79,3 +79,12 @@ document.addEventListener('click', e => {
   const a = e.target.closest('a[href^="#book-"]'); if (!a) return;
   e.preventDefault(); history.replaceState(null, '', a.getAttribute('href')); dispatchEvent(new HashChangeEvent('hashchange'));
 });
+// Hotline sheet (mobile "Call us" button)
+(() => {
+  const fab = document.querySelector('.call-fab'), sheet = document.getElementById('call-sheet');
+  if (!fab) return;
+  const close = () => { sheet.hidden = true; fab.focus(); };
+  fab.addEventListener('click', () => { sheet.hidden = false; sheet.querySelector('a').focus(); });
+  sheet.addEventListener('click', e => { if (e.target === sheet || e.target.closest('.cs-x')) close(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) close(); });
+})();
