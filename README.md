@@ -14,3 +14,12 @@ Coded front-end of the **Customer App Mock-up** in Figma: Home (guest + signed-i
 
 Run locally: `python3 -m http.server` and open http://localhost:8000.
 Demo promo codes: `GETKLEAN100`, `WELCOME`.
+
+## Worker app (`/worker/`)
+Installable mobile web app for Housemaids, Cleaners, Technicians and Riders: jobs, directions, GPS check-in and out,
+before/after photos (per aircon unit), cash payment proof, customer sign-off (Deep Cleaning leads), housemaid
+availability, earnings and profile. Runs in demo mode until `worker/js/config.js` has the Supabase URL and anon key.
+
+## Database (`supabase/schema.sql`)
+Run once in Supabase → SQL Editor. Creates the tables, row-level security per the PRD permissions matrix,
+check-in/check-out functions with photo and cash-proof rules, and private storage buckets for photos and documents.

@@ -1,0 +1,16 @@
+{
+  "name": "Getklean Work",
+  "short_name": "Getklean Work",
+  "description": "Jobs, check-in, photos and earnings for Getklean Housemaids, Cleaners, Technicians and Riders.",
+  "start_url": "./#/jobs",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#3886c8",
+  "theme_color": "#3886c8",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
