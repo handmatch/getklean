@@ -9,7 +9,7 @@ export const img = (src, alt, cls = '', fallback = '') =>
   `<img src="${src}" alt="${esc(alt)}" class="${cls}" loading="lazy" onerror="this.outerHTML=this.dataset.fb||''" data-fb="${esc(fallback)}">`;
 
 export const logo = (variant = 'blue') => img(
-  variant === 'white' ? 'assets/logo-white.png' : 'assets/logo.png', 'GetKlean',
+  variant === 'white' ? 'assets/logo-white.svg' : 'assets/logo.svg', 'GetKlean',
   '', `<span class="wordmark">GET<b>KLEAN</b></span>`);
 
 // ---------- Nav ----------
