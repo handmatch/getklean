@@ -684,3 +684,8 @@ ul, ol { padding: 0; list-style: none; }
   .dd-btn { width: 100%; justify-content: space-between; padding: 12px 8px; font-size: 16px; }
   .dd-menu { position: static; min-width: 0; box-shadow: none; margin: 4px 0 8px; }
 }
+
+/* How it works: simple, minimal colour */
+.hs-k { color: var(--ink-2); }
+.hs-n, .hs-steps li:nth-child(2) .hs-n, .hs-steps li:nth-child(3) .hs-n { background: none; color: var(--navy); border: 1.5px solid var(--line); font-weight: 700; font-size: 13px; width: 28px; height: 28px; }
+.hs-steps b { font-weight: 700; }
