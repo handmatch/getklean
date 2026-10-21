@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getklean · Your space, reclaimed</title>
+  <meta name="description" content="Housemaids on demand, aircon cleaning and deep cleaning for homes and businesses in Metro Manila. Vetted, trained, insured.">
+  <meta property="og:title" content="Getklean · Your space, reclaimed">
+  <meta property="og:description" content="Housemaid On-Demand, Aircon Cleaning and Deep Cleaning in Metro Manila.">
+  <meta property="og:image" content="brand/logo.png">
+  <meta name="theme-color" content="#3886c8">
+  <link rel="icon" href="brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=block">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="hotbar" role="region" aria-label="Hotlines">
+    <div class="container hotbar-in">
+      <span class="hb-lbl"><span class="ic fill">call</span>Hotlines</span>
+      <span>Housemaid <a href="tel:+639674753848">(0967) 475-3848</a></span>
+      <span>Aircon <a href="tel:+639317288845">(0931) 728-8845</a></span>
+      <span>Deep cleaning <a href="tel:+639674753848">(0967) 475-3848</a></span>
+      <a class="hb-mail" href="mailto:sales@getkleanph.com">sales@getkleanph.com</a>
+    </div>
+  </div>
+
+  <header class="top" id="top">
+    <div class="container top-in">
+      <a href="./" class="brand" aria-label="Getklean home"><img src="brand/logo-on-blue.svg" alt="Getklean · Your space, reclaimed" width="192" height="41"></a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span class="ic">menu</span></button>
+      <nav class="menu" id="menu" aria-label="Main">
+        <div class="dd">
+          <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-services">Services <span class="ic">expand_more</span></button>
+          <div class="dd-menu" id="dd-services">
+            <a href="#book-housemaid" data-unit-link="housemaid"><span class="ic">cleaning_services</span><span><b>Housemaid On-Demand</b><small>Half or whole day, from PHP510</small></span></a>
+            <a href="#book-aircon" data-unit-link="aircon"><span class="ic">ac_unit</span><span><b>Aircon Cleaning</b><small>All unit types, from PHP970</small></span></a>
+            <a href="#book-deep" data-unit-link="deep"><span class="ic">sanitizer</span><span><b>Deep Cleaning</b><small>Offices, restaurants, Airbnbs</small></span></a>
+          </div>
+        </div>
+        <a href="#reviews" data-sec-link="reviews">Reviews</a>
+        <a class="btn ghost" href="app/#/sign-in">Sign in</a>
+        <a class="btn yellow" href="#book">Book now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== SHARED MAIN BANNER ===================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="display">Your space,<br><span class="y">reclaimed.</span></h1>
+          <p class="lead">Housemaids by the day, aircon cleaning and deep cleaning for homes and businesses. Vetted, trained teams, and prices you see before you book.</p>
+        </div>
+        <figure class="hero-figure">
+          <img src="img/cover-team.jpg" alt="Two smiling Getklean cleaners in blue uniforms with cleaning tool belts" width="923" height="604" fetchpriority="high">
+        </figure>
+      </div>
+
+      <div class="container">
+        <div class="finder" id="book">
+          <div class="svc-tabs" role="tablist" aria-label="Choose a service">
+            <button class="svc on" role="tab" aria-selected="true" aria-controls="f-housemaid" id="t-housemaid" data-svc="housemaid"><span class="svc-ic"><span class="ic">cleaning_services</span></span><b>Housemaid On-Demand</b></button>
+            <button class="svc" role="tab" aria-selected="false" aria-controls="f-aircon" id="t-aircon" data-svc="aircon" tabindex="-1"><span class="svc-ic"><span class="ic">ac_unit</span></span><b>Aircon Cleaning</b></button>
+            <button class="svc" role="tab" aria-selected="false" aria-controls="f-deep" id="t-deep" data-svc="deep" tabindex="-1"><span class="svc-ic"><span class="ic">sanitizer</span></span><b>Deep Cleaning</b></button>
+          </div>
+
+          <form class="svc-form" id="f-housemaid" role="tabpanel" aria-labelledby="t-housemaid" data-svc="housemaid" novalidate>
+            <label class="q-field"><span>Where</span><select name="where" required><option value="" selected disabled>Choose your area</option><option>Metro Manila</option><option>Bulacan</option><option>Rizal</option></select></label>
+            <label class="q-field"><span>When</span><input type="date" name="when" required></label>
+            <label class="q-field"><span>How long</span><select name="dur"><option value="whole">Whole day (8h)</option><option value="half">Half day (4h)</option></select></label>
+            <button class="btn navy lg" type="submit">Find a housemaid <span class="ic">arrow_forward</span></button>
+            <p class="f-note">First booking on a weekday? <b>PHP650</b> instead of PHP1,200.</p>
+            <a class="f-call" href="tel:+639674753848"><span class="ic fill">call</span><span>Prefer to call? <b>Housemaid hotline (0967) 475-3848</b></span></a>
+          </form>
+
+          <form class="svc-form" id="f-aircon" role="tabpanel" aria-labelledby="t-aircon" data-svc="aircon" hidden novalidate>
+            <label class="q-field"><span>Aircon type</span><select name="actype">
+              <option value="Window type" data-price="970">Window type · PHP970</option>
+              <option value="Split type" data-price="1600" selected>Split type · PHP1,600</option>
+              <option value="Floor mounted" data-price="3100">Floor mounted · PHP3,100</option>
+              <option value="Cassette type" data-price="5490">Cassette type · PHP5,490</option></select></label>
+            <label class="q-field"><span>How many units?</span><select name="units"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option><option>10</option></select></label>
+            <button class="btn navy lg" type="submit">Book now <span class="ic">arrow_forward</span></button>
+            <p class="f-note" aria-live="polite">Estimated total <b id="ac-est">PHP1,600</b> · final price confirmed when you book.</p>
+            <a class="f-call" href="tel:+639317288845"><span class="ic fill">call</span><span>Prefer to call? <b>Aircon hotline (0931) 728-8845</b></span></a>
+          </form>
+
+          <form class="svc-form" id="f-deep" role="tabpanel" aria-labelledby="t-deep" data-svc="deep" hidden novalidate>
+            <label class="q-field"><span>Type of space</span><select name="space"><option value="Office">Office · from PHP990</option><option value="Restaurant">Restaurant · from PHP1,490</option><option value="Airbnb">Airbnb / condo unit · from PHP800</option></select></label>
+            <label class="q-field"><span>Where</span><select name="where" required><option value="" selected disabled>Choose your area</option><option>Metro Manila</option><option>Bulacan</option><option>Rizal</option><option>Other city</option></select></label>
+            <button class="btn navy lg" type="submit">Get a quote <span class="ic">arrow_forward</span></button>
+            <p class="f-note">We’ll reply with a quote for your space and schedule.</p>
+            <a class="f-call" href="tel:+639674753848"><span class="ic fill">call</span><span>Prefer to call? <b>Deep cleaning hotline (0967) 475-3848</b></span></a>
+          </form>
+        </div>
+      </div>
+
+      <div class="container stats three">
+        <div><b>100,000</b><span>customers served</span></div>
+        <div><b>500+</b><span>cleaners and technicians</span></div>
+        <div><b>100+</b><span>cities and municipalities</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== HOUSEMAID ON-DEMAND ===================== -->
+    <div class="unit" id="unit-housemaid" data-unit="housemaid">
+      <section class="how-strip" aria-label="How it works">
+        <div class="container hs-in">
+          <p class="hs-k">How it works</p>
+          <ol class="hs-steps">
+            <li><span class="hs-n">1</span><div><b>Tell us what you need</b><small>Pick a day, hours and tasks.</small></div></li>
+            <li><span class="hs-n">2</span><div><b>Pick your housemaid</b><small>Choose a vetted housemaid.</small></div></li>
+            <li><span class="hs-n">3</span><div><b>Confirm and relax</b><small>Pay by card, GCash or Maya.</small></div></li>
+          </ol>
+        </div>
+      </section>
+      <section class="campaign-sec">
+        <div class="container">
+          <div class="banner trial">
+            <div class="banner-copy">
+              <p class="kicker">New customer trial · weekdays only</p>
+              <h2 class="h2">Try your first day for PHP650.</h2>
+              <p class="b-sub">A whole day with a vetted housemaid for PHP650 instead of PHP1,200. Half day for PHP510.</p>
+              <ul class="b-perks">
+                <li><span class="ic">verified</span>Vetted &amp; trained</li>
+                <li><span class="ic">shield</span>Insured up to PHP20,000</li>
+                <li><span class="ic">autorenew</span>Free replacement</li>
+              </ul>
+              <div class="b-actions"><a class="btn navy lg" href="app/#/book/when">Book your trial day <span class="ic">arrow_forward</span></a><a class="b-call" href="tel:+639674753848"><span class="ic fill">call</span>or call (0967) 475-3848</a></div>
+              <p class="terms">Weekday bookings for first-time customers. Transportation not included. T&amp;C apply.</p>
+            </div>
+            <div class="trial-art" aria-hidden="true">
+              <div class="ta-price"><small>Whole day</small><b>PHP650</b><s>PHP1,200</s><span class="ta-save">Save PHP550</span></div>
+              <div class="ta-price alt"><small>Half day</small><b>PHP510</b><s>PHP900</s><span class="ta-save">Save PHP390</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="container">
+          <p class="kicker">What your housemaid can do</p>
+          <h2 class="h2">One booking. Every chore covered.</h2>
+          <p class="sub">Pick All-around help, or choose exactly what you need. We match you with a housemaid who has done it before.</p>
+          <div class="tasks">
+            <div class="task"><span class="ic">cleaning_services</span><b>Housekeeping</b><small>Sweeping, mopping, dusting, bathrooms, beds</small></div>
+            <div class="task"><span class="ic">countertops</span><b>Kitchen care</b><small>Dishes, counters, stove, fridge wipe-down</small></div>
+            <div class="task"><span class="ic">skillet</span><b>Cooking</b><small>Meal prep and cooking with your ingredients</small></div>
+            <div class="task"><span class="ic">local_laundry_service</span><b>Laundry &amp; ironing</b><small>Wash, dry, fold, press and hang</small></div>
+            <div class="task"><span class="ic">child_care</span><b>Childcare</b><small>Supervising, feeding and playtime</small></div>
+            <div class="task"><span class="ic">elderly</span><b>Elderly care</b><small>Companionship and daily routine</small></div>
+            <div class="task"><span class="ic fill">pets</span><b>Pet care</b><small>Feeding, walking, litter and cleanup</small></div>
+            <div class="task"><span class="ic">local_florist</span><b>Garden &amp; errands</b><small>Watering, patio, garage, grocery runs</small></div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="sec navy">
+        <div class="container">
+          <p class="kicker y">Pricing</p>
+          <h2 class="h2">Pay per visit, or save with Flexi.</h2>
+          <p class="sub">A Flexi Plan unlocks member rates on every visit while it’s active. The plan fee doesn’t include visits.</p>
+          <div class="price-wrap">
+            <div class="rates" role="table" aria-label="Housemaid price per visit">
+              <div class="r head" role="row"><span role="columnheader">Per visit</span><span role="columnheader">Regular</span><span role="columnheader">Flexi member</span></div>
+              <div class="r" role="row"><span role="cell">Weekday · Half day</span><span role="cell"><s>PHP900</s></span><span role="cell"><b>PHP510</b></span></div>
+              <div class="r" role="row"><span role="cell">Weekday · Whole day</span><span role="cell"><s>PHP1,200</s></span><span role="cell"><b>PHP650</b></span></div>
+              <div class="r" role="row"><span role="cell">Weekend · Half day</span><span role="cell"><s>PHP990</s></span><span role="cell"><b>PHP561</b></span></div>
+              <div class="r" role="row"><span role="cell">Weekend · Whole day</span><span role="cell"><s>PHP1,390</s></span><span role="cell"><b>PHP715</b></span></div>
+              <p class="note">Insurance up to PHP20,000 is included free on every booking. Transportation not included.</p>
+            </div>
+            <div class="plans">
+              <a class="plan" href="app/#/book/plan" data-plan="1m"><span class="pl">1 month</span><b>PHP1,790</b><small>Try member rates</small></a>
+              <a class="plan pop" href="app/#/book/plan" data-plan="3m"><span class="badge">Most popular</span><span class="pl">3 months</span><b>PHP4,990</b><small><s>PHP5,370</s> · save 7% + 8 free hours</small></a>
+              <a class="plan" href="app/#/book/plan" data-plan="6m"><span class="pl">6 months</span><b>PHP8,490</b><small><s>PHP10,740</s> · save 20%</small></a>
+              <a class="plan" href="app/#/book/plan" data-plan="12m"><span class="pl">Annual</span><b>PHP13,990</b><small><s>PHP21,480</s> · save 35%</small></a>
+            </div>
+          </div>
+          <ul class="perks">
+            <li><span class="ic">all_inclusive</span>Unlimited bookings</li>
+            <li><span class="ic">event_available</span>Locked schedule</li>
+            <li><span class="ic">edit_calendar</span>Free reschedule monthly</li>
+            <li><span class="ic">swap_horiz</span>Free housemaid replacement</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="container why">
+          <div>
+            <p class="kicker">Why Getklean housemaids</p>
+            <h2 class="h2">The care of an agency. None of the paperwork.</h2>
+            <p class="sub">We handle the employer side, the contracts and government benefits, so you just get a clean home and a housemaid you trust.</p>
+          </div>
+          <ul class="why-list">
+            <li><span class="ic fill">verified</span><div><b>Vetted and trained</b><p>Every housemaid is background checked and trained before her first booking.</p></div></li>
+            <li><span class="ic fill">autorenew</span><div><b>Unlimited replacements</b><p>Not the right fit? Replace or cancel anytime, with zero fees.</p></div></li>
+            <li><span class="ic fill">shield</span><div><b>Getklean Protect</b><p>Theft and accidental damage up to PHP20,000, plus medical cover if your housemaid is hurt on the job.</p></div></li>
+            <li><span class="ic fill">account_balance</span><div><b>Benefits included</b><p>Government benefits are built into the rate. No hidden employer costs.</p></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sec cream">
+        <div class="container faq">
+          <div><p class="kicker">Housemaid FAQ</p><h2 class="h2">Good to know.</h2>
+            <p class="sub">Still have a question? Call <a href="tel:+639674753848">(0967) 475-3848</a> or <a href="https://m.me/getklean.housemaids" target="_blank" rel="noopener">chat on Messenger</a>.</p></div>
+          <div class="qa">
+            <details><summary>Can I book for today?</summary><p>Yes. Choose “Book now” and pick today or tomorrow. Start times run from 7:00AM to 3:00PM.</p></details>
+            <details><summary>What’s the difference between half day and whole day?</summary><p>Half day is 4 hours of service. Whole day is 8 hours: 7 hours of service plus a 1-hour break.</p></details>
+            <details><summary>Can I choose my housemaid?</summary><p>Yes. You’ll see recommended housemaids near you with their rating and distance. Pick one, save favorites for next time, or let us match you.</p></details>
+            <details><summary>What if I need to cancel?</summary><p>Cancellation is free up to 24 hours before each visit. Flexi members also get a free reschedule once a month.</p></details>
+            <details><summary>Where do you operate?</summary><p>Metro Manila, Bulacan and Rizal.</p></details>
+          </div>
+        </div>
+      </section>
+      <section class="sec reviews-sec" id="reviews-housemaid" data-sec="reviews">
+        <div class="container">
+          <p class="kicker">What customers say</p>
+          <h2 class="h2">Families who got their time back.</h2>
+          <div class="reviews">
+            <figure class="ph-review"><span class="ph-tag">Placeholder</span><div class="stars" aria-hidden="true">★★★★★</div><blockquote>Google review from a Housemaid On-Demand customer goes here.</blockquote><figcaption><span class="av">G</span><span><b>Customer name</b><small>Google review · Housemaid On-Demand</small></span></figcaption></figure><figure class="ph-review"><span class="ph-tag">Placeholder</span><div class="stars" aria-hidden="true">★★★★★</div><blockquote>Google review from a Housemaid On-Demand customer goes here.</blockquote><figcaption><span class="av">G</span><span><b>Customer name</b><small>Google review · Housemaid On-Demand</small></span></figcaption></figure><figure class="ph-review"><span class="ph-tag">Placeholder</span><div class="stars" aria-hidden="true">★★★★★</div><blockquote>Google review from a Housemaid On-Demand customer goes here.</blockquote><figcaption><span class="av">G</span><span><b>Customer name</b><small>Google review · Housemaid On-Demand</small></span></figcaption></figure>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== AIRCON CLEANING ===================== -->
+    <div class="unit" id="unit-aircon" data-unit="aircon" hidden>
+      <section class="how-strip" aria-label="How it works">
+        <div class="container hs-in">
+          <p class="hs-k">How it works</p>
+          <ol class="hs-steps">
+            <li><span class="hs-n">1</span><div><b>Tell us your units</b><small>Choose the type and number of units.</small></div></li>
+            <li><span class="hs-n">2</span><div><b>Pick a schedule</b><small>Book online or call our hotline.</small></div></li>
+            <li><span class="hs-n">3</span><div><b>We clean, you cool down</b><small>We clean each unit and tidy up.</small></div></li>
+          </ol>
+        </div>
+      </section>
+      <section class="campaign-sec">
+        <div class="container">
+          <div class="banner elnino">
+            <div class="banner-copy">
+              <p class="kicker">Aircon cleaning · El Niño</p>
+              <h2 class="h2">Is your aircon ready for El Niño?</h2>
+              <p class="b-sub">Keep your aircon clean and ready for the heat.</p>
+              <ul class="b-perks">
+                <li><span class="ic">ac_unit</span>Better cooling</li>
+                <li><span class="ic">air</span>Cleaner air</li>
+                <li><span class="ic">device_thermostat</span>Higher efficiency</li>
+              </ul>
+              <div class="b-actions"><a class="btn navy lg" href="#book-aircon">Book now <span class="ic">arrow_forward</span></a><a class="b-call" href="tel:+639317288845"><span class="ic fill">call</span>or call (0931) 728-8845</a></div>
+            </div>
+            <div class="banner-photo"><img src="img/aircon-el-nino.jpg" alt="A woman sitting on her bed, sweating in the heat" width="1080" height="640" loading="lazy"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="container">
+          <p class="kicker">Rates</p>
+          <h2 class="h2">Stay cool with professional aircon cleaning.</h2>
+          <p class="sub">Boost your air quality, extend your aircon’s life and save on energy bills, all with a single cleaning.</p>
+          <div class="ac-rates">
+            <button class="ac-card" data-actype="Window type"><span class="ic">window</span><b>Window type</b><span class="ac-p">PHP970</span><span class="ac-go">Book <span class="ic">arrow_forward</span></span></button>
+            <button class="ac-card pop" data-actype="Split type"><span class="ic">ac_unit</span><b>Split type</b><span class="ac-p">PHP1,600</span><span class="ac-go">Book <span class="ic">arrow_forward</span></span></button>
+            <button class="ac-card" data-actype="Floor mounted"><span class="ic">kitchen</span><b>Floor mounted</b><span class="ac-p">PHP3,100</span><span class="ac-go">Book <span class="ic">arrow_forward</span></span></button>
+            <button class="ac-card" data-actype="Cassette type"><span class="ic">grid_view</span><b>Cassette type</b><span class="ac-p">PHP5,490</span><span class="ac-go">Book <span class="ic">arrow_forward</span></span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec cream">
+        <div class="container why">
+          <div>
+            <p class="kicker">Why clean your aircon</p>
+            <h2 class="h2">Cooler rooms. Cleaner air. Lower bills.</h2>
+            <p class="sub">Trusted by thousands of households in Metro Manila.</p>
+          </div>
+          <ul class="why-list">
+            <li><span class="ic">air</span><div><b>Improved air quality</b><p>Remove dust, allergens and bacteria.</p></div></li>
+            <li><span class="ic">bolt</span><div><b>Energy efficiency</b><p>Reduce your energy bills.</p></div></li>
+            <li><span class="ic">event_available</span><div><b>Quick and convenient</b><p>Book online or through our hotline.</p></div></li>
+            <li><span class="ic">build</span><div><b>Longer lifespan</b><p>Prevent wear and tear on your unit.</p></div></li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="sec cream">
+        <div class="container faq">
+          <div><p class="kicker">Aircon FAQ</p><h2 class="h2">Good to know.</h2>
+            <p class="sub">Still have a question? Call <a href="tel:+639317288845">(0931) 728-8845</a>.</p></div>
+          <div class="qa">
+            <details><summary>Which aircon types do you clean?</summary><p>Window type, split type, floor mounted and cassette type units.</p></details>
+            <details><summary>How do I book?</summary><p>Choose your aircon type and number of units above and tap Book now, or call our aircon hotline at (0931) 728-8845.</p></details>
+            <details><summary>Where are you available?</summary><p>Metro Manila and most key cities in the Philippines.</p></details>
+          </div>
+        </div>
+      </section>
+      <section class="sec reviews-sec" id="reviews-aircon" data-sec="reviews">
+        <div class="container">
+          <p class="kicker">What customers say</p>
+          <h2 class="h2">Cool rooms, happy customers.</h2>
+          <div class="reviews">
+            <figure><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“I just had my air conditioner cleaned, wow amazing service! I am blown away at how clean it now is… It looks brand new. Lovely company to do business with, very friendly &amp; professional from sales to technician.”</blockquote><figcaption><span class="av">NR</span><span><b>Niessel Rizaldo</b><small>Aircon cleaning</small></span></figcaption></figure><figure><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“It’s my first time to try booking your services, and I have to say, 10/10! Truly bumalik nga ang lamig ng 2y/o aircon namin, we thought may problem lang with the freon. They worked fast and efficiently.”</blockquote><figcaption><span class="av">M</span><span><b>Milcah</b><small>Aircon cleaning</small></span></figcaption></figure><figure><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Problem solved. Unlike other service providers na basta lang mabugahan ng tubig yung unit para masabing malinis. From now on, GetKlean is our family go-to aircon service. Thank you very much!”</blockquote><figcaption><span class="av">JT</span><span><b>Johnson Tang</b><small>Aircon cleaning</small></span></figcaption></figure>
+          </div>
+        </div>
+      </section>
+      <section class="sec clients-sec" id="clients-aircon" data-sec="clients">
+        <div class="container">
+          <p class="kicker">Clients and partners</p>
+          <h2 class="h2">Trusted by brands you know.</h2>
+          <ul class="logos" aria-label="Clients and partners">
+          <li><img src="https://static.wixstatic.com/media/497128_9275147d985046afaaea61345274e44d~mv2.png/v1/fill/w_980,h_1123,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/JBFCF-f8098eac.png" alt="Jollibee" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_367b0bf2c3ad4a399a6a7c266b270743~mv2.png/v1/fill/w_980,h_214,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manam-logo-updated-png.png" alt="Manam" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_d88f51065b21479f9e0c1607899b0015~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/301219640_402673242002290_8098956746775640752_n.jpg" alt="Bruno’s" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_a25e85c65d7845ca938d48fd1dec2231~mv2.png/v1/fill/w_667,h_830,al_c,q_90,enc_avif,quality_auto/CLIENTS-WE-SERVE_0041_PNP.png" alt="PNP" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_976db87bea5f412c84b6714fe8434a30~mv2.png/v1/fill/w_900,h_500,al_c,q_90,enc_avif,quality_auto/naval-group-vector-logo.png" alt="Naval Group" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_c6519fcc5a8b46d8aa9c4cb7130e2918~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0042_GOOGLE.png" alt="Google" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_cad1b89ad78c4576826b125ed38b7638~mv2.png/v1/fill/w_280,h_80,al_c,q_85,enc_avif,quality_auto/secureops.png" alt="Secureops" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_d526bb04518d4914a95c721c02abe265~mv2.png/v1/fill/w_980,h_718,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0038_SECURITY-BANK.png" alt="Security Bank" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_68a0f43ee97b437fb7b1e54911200974~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0040_PS-BANK.png" alt="PSBank" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_c4a17e9d22c14100817a133e2b6993b9~mv2.jpg/v1/fill/w_980,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Belo-Logo-CA8161-0218-edited-scaled.jpg" alt="Belo" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_5f7709f6032945bb902b8178e941a482~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0037_UNILEVER.png" alt="Unilever" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_1ec34f7f7013476e90d3c271567f0985~mv2.png/v1/fill/w_207,h_244,al_c,q_85,enc_avif,quality_auto/images.png" alt="Zenith Medical" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_8936edbce6a043f7b0af9b27cecbe893~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0039_RESORT-WORLD.png" alt="Resorts World" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_42959f26649c40edabf9c3e3a5b5ee9e~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0036_SM.png" alt="SM Supermalls" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+        </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== DEEP CLEANING (Getklean Professional) ===================== -->
+    <div class="unit" id="unit-deep" data-unit="deep" hidden>
+      <section class="how-strip" aria-label="How it works">
+        <div class="container hs-in">
+          <p class="hs-k">How it works</p>
+          <ol class="hs-steps">
+            <li><span class="hs-n">1</span><div><b>Tell us about your space</b><small>Office, restaurant or Airbnb.</small></div></li>
+            <li><span class="hs-n">2</span><div><b>Get your quote</b><small>Priced for your space and scope.</small></div></li>
+            <li><span class="hs-n">3</span><div><b>We schedule your crew</b><small>Timed around your business hours.</small></div></li>
+          </ol>
+        </div>
+      </section>
+      <section class="campaign-sec">
+        <div class="container">
+          <div class="banner placeholder" role="img" aria-label="Deep cleaning campaign placeholder">
+            <div class="ph-in">
+              <span class="ph-tag">Placeholder</span>
+              <span class="ic">image</span>
+              <p class="ph-t">Deep Cleaning campaign art</p>
+              <p class="ph-s">Drop the campaign banner here · recommended 1920 × 720 px (desktop) and 1080 × 1080 px (mobile)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="container">
+          <p class="kicker">Getklean Professional</p>
+          <h2 class="h2">Cleaner workplace, happier headspace.</h2>
+          <p class="sub">Top-tier deep cleaning for businesses and rentals. Cleaner, healthier spaces that lift productivity and guest satisfaction.</p>
+          <div class="pro-cards">
+            <article class="pro"><span class="pro-ic"><span class="ic">apartment</span></span><h3>Office cleaning</h3><p class="from">Starts at <b>PHP990</b></p><ul><li>Lobby</li><li>Working areas and cubicles</li><li>Restrooms</li><li>Office pantry</li><li>Conference rooms</li></ul><button class="btn navy" data-space="Office">Get a quote</button></article>
+            <article class="pro"><span class="pro-ic"><span class="ic">restaurant</span></span><h3>Restaurant cleaning</h3><p class="from">Starts at <b>PHP1,490</b></p><ul><li>Dining area</li><li>Restrooms</li></ul><button class="btn navy" data-space="Restaurant">Get a quote</button></article>
+            <article class="pro"><span class="pro-ic"><span class="ic">bed</span></span><h3>Airbnb cleaning</h3><p class="from">Starts at <b>PHP800</b></p><ul><li>Check-out, check-in cleaning</li><li>Laundry</li><li>Room quality checking</li></ul><button class="btn navy" data-space="Airbnb">Get a quote</button></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec cream">
+        <div class="container why">
+          <div>
+            <p class="kicker">Why Getklean Professional</p>
+            <h2 class="h2">Cleanliness is next to business excellence.</h2>
+            <p class="sub">Trusted by brands in food, banking, tech, government, hospitality and retail.</p>
+          </div>
+          <ul class="why-list">
+            <li><span class="ic">groups</span><div><b>Trained, professional crews</b><p>Polite, well-trained cleaners who know commercial spaces.</p></div></li>
+            <li><span class="ic">task_alt</span><div><b>Meticulous and efficient</b><p>Thorough work that keeps your operations running.</p></div></li>
+            <li><span class="ic">science</span><div><b>High-standard chemicals</b><p>Professional-grade products for a deeper, safer clean.</p></div></li>
+            <li><span class="ic">request_quote</span><div><b>Clear quotes</b><p>Transparent starting prices, with a quote for your exact scope.</p></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sec reviews-sec" id="reviews-deep" data-sec="reviews">
+        <div class="container">
+          <p class="kicker">What customers say</p>
+          <h2 class="h2">Spotless spaces, from homes to offices.</h2>
+          <div class="reviews">
+            <figure><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“GetKlean is very meticulous and efficient. They make sure to clean every nook and cranny. Their cleaning crew is well trained, polite and very professional.”</blockquote><figcaption><span class="av">DD</span><span><b>Denise De Jesus</b><small>Deep cleaning</small></span></figcaption></figure><figure><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“10/10 ratings for their dedication and hardwork. They rarely talk to each other because they are so busy doing such a great job at cleaning our house.”</blockquote><figcaption><span class="av">RM</span><span><b>Raech May</b><small>Home cleaning</small></span></figcaption></figure><figure><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“They really know what they are doing, very focused on their work.”</blockquote><figcaption><span class="av">CA</span><span><b>Charlie A.</b><small>Getklean customer</small></span></figcaption></figure>
+          </div>
+        </div>
+      </section>
+      <section class="sec clients-sec" id="clients-deep" data-sec="clients">
+        <div class="container">
+          <p class="kicker">Clients and partners</p>
+          <h2 class="h2">Trusted by brands you know.</h2>
+          <ul class="logos" aria-label="Clients and partners">
+          <li><img src="https://static.wixstatic.com/media/497128_9275147d985046afaaea61345274e44d~mv2.png/v1/fill/w_980,h_1123,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/JBFCF-f8098eac.png" alt="Jollibee" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_367b0bf2c3ad4a399a6a7c266b270743~mv2.png/v1/fill/w_980,h_214,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manam-logo-updated-png.png" alt="Manam" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_d88f51065b21479f9e0c1607899b0015~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/301219640_402673242002290_8098956746775640752_n.jpg" alt="Bruno’s" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_a25e85c65d7845ca938d48fd1dec2231~mv2.png/v1/fill/w_667,h_830,al_c,q_90,enc_avif,quality_auto/CLIENTS-WE-SERVE_0041_PNP.png" alt="PNP" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_976db87bea5f412c84b6714fe8434a30~mv2.png/v1/fill/w_900,h_500,al_c,q_90,enc_avif,quality_auto/naval-group-vector-logo.png" alt="Naval Group" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_c6519fcc5a8b46d8aa9c4cb7130e2918~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0042_GOOGLE.png" alt="Google" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_cad1b89ad78c4576826b125ed38b7638~mv2.png/v1/fill/w_280,h_80,al_c,q_85,enc_avif,quality_auto/secureops.png" alt="Secureops" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_d526bb04518d4914a95c721c02abe265~mv2.png/v1/fill/w_980,h_718,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0038_SECURITY-BANK.png" alt="Security Bank" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_68a0f43ee97b437fb7b1e54911200974~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0040_PS-BANK.png" alt="PSBank" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_c4a17e9d22c14100817a133e2b6993b9~mv2.jpg/v1/fill/w_980,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Belo-Logo-CA8161-0218-edited-scaled.jpg" alt="Belo" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_5f7709f6032945bb902b8178e941a482~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0037_UNILEVER.png" alt="Unilever" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_1ec34f7f7013476e90d3c271567f0985~mv2.png/v1/fill/w_207,h_244,al_c,q_85,enc_avif,quality_auto/images.png" alt="Zenith Medical" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_8936edbce6a043f7b0af9b27cecbe893~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0039_RESORT-WORLD.png" alt="Resorts World" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+          <li><img src="https://static.wixstatic.com/media/497128_42959f26649c40edabf9c3e3a5b5ee9e~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/CLIENTS-WE-SERVE_0036_SM.png" alt="SM Supermalls" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fb',textContent:this.alt}))"></li>
+        </ul>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="foot">
+    <div class="container foot-in">
+      <div class="foot-brand">
+        <img src="brand/logo-yellow.svg" alt="Getklean" width="192" height="41">
+        <p>Housemaids, aircon cleaning and deep cleaning for homes and businesses. Unit 803 Quadrillion Mansion, M. Paterno St., San Juan, Metro Manila.</p>
+        <a class="btn yellow" href="https://m.me/getklean.housemaids" target="_blank" rel="noopener"><span class="ic">chat</span> Chat on Messenger</a>
+      </div>
+      <nav aria-label="Services"><p>Services</p><a href="#book-housemaid" data-unit-link="housemaid">Housemaid On-Demand</a><a href="#book-aircon" data-unit-link="aircon">Aircon Cleaning</a><a href="#book-deep" data-unit-link="deep">Deep Cleaning</a><a href="app/#/book/plan">Flexi Plans</a></nav>
+      <nav aria-label="Follow us"><p>Follow us</p><a href="https://www.facebook.com/getklean.housemaids" target="_blank" rel="noopener">Facebook · Housemaids</a><a href="https://www.facebook.com/getkleanaircon" target="_blank" rel="noopener">Facebook · Aircon</a><a href="https://www.facebook.com/getkleanhomecleaning" target="_blank" rel="noopener">Facebook · Deep Cleaning</a><a href="https://www.instagram.com/getkleanofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@getkleanofficial" target="_blank" rel="noopener">TikTok</a></nav>
+      <div class="foot-hot"><p>Hotlines</p>
+        <a href="tel:+639674753848"><small>Housemaid On-Demand</small>(0967) 475-3848</a>
+        <a href="tel:+639317288845"><small>Aircon Cleaning</small>(0931) 728-8845</a>
+        <a href="tel:+639674753848"><small>Deep &amp; Professional Cleaning</small>(0967) 475-3848</a>
+        <a href="mailto:sales@getkleanph.com"><small>Email</small>sales@getkleanph.com</a>
+      </div>
+    </div>
+    <div class="container legal">© <span id="yr">2026</span> GetKleanPH. All rights reserved. · <a href="app/#/sign-in">Sign in</a></div>
+  </footer>
+
+  <div class="m-bar" role="region" aria-label="Quick actions">
+    <button class="mb-call call-fab" aria-haspopup="dialog" aria-controls="call-sheet"><span class="ic fill">call</span>Call</button>
+    <a class="mb-book" href="#book"><span class="ic">event_available</span>Book now</a>
+  </div>
+  <div class="call-sheet" id="call-sheet" role="dialog" aria-modal="true" aria-label="Call a hotline" hidden>
+    <div class="cs-card">
+      <div class="cs-head"><b>Call a hotline</b><button class="cs-x" aria-label="Close"><span class="ic">close</span></button></div>
+      <a href="tel:+639674753848"><span class="ic">cleaning_services</span><span><small>Housemaid On-Demand</small>(0967) 475-3848</span></a>
+      <a href="tel:+639317288845"><span class="ic">ac_unit</span><span><small>Aircon Cleaning</small>(0931) 728-8845</span></a>
+      <a href="tel:+639674753848"><span class="ic">sanitizer</span><span><small>Deep &amp; Professional Cleaning</small>(0967) 475-3848</span></a>
+    </div>
+  </div>
+
+  <script src="site.js" defer></script>
+</body>
+</html>
