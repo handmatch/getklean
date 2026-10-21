@@ -107,6 +107,12 @@
   }));
   $$('.svc-form select').forEach(s => s.addEventListener('change', () => s.closest('.q-field').classList.remove('err')));
 
+  // "Reviews" in the menu jumps to the reviews of the business you're viewing
+  $$('[data-sec-link]').forEach(a => a.addEventListener('click', e => {
+    const t = $(`.unit:not([hidden]) [data-sec="${a.dataset.secLink}"]`); if (!t) return;
+    e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
   // Bottom bar "Book now": jump to the form of the business you're viewing
   $('.mb-book')?.addEventListener('click', e => { e.preventDefault(); scrollToFinder(); });
 

@@ -657,3 +657,12 @@ ul, ol { padding: 0; list-style: none; }
   .svc b { font-size: 11px; }
   .stats b { font-size: 19px; }
 }
+
+/* Per-unit reviews + client logos */
+.reviews-sec { background: var(--white); }
+.reviews-sec .reviews figure { border: 2px solid var(--line); box-shadow: none; }
+.clients-sec { background: var(--white); border-top: 1px solid var(--line); }
+.ph-review { position: relative; border-style: dashed !important; border-color: #b7c4d3 !important; background: repeating-linear-gradient(135deg, #f7f9fb 0 14px, #f1f4f8 14px 28px) !important; }
+.ph-review .ph-tag { position: absolute; top: 14px; right: 14px; }
+.ph-review blockquote { color: var(--ink-2); font-style: italic; }
+.ph-review .av { background: #dde5ee; color: var(--ink-2); }
