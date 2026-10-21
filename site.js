@@ -8,6 +8,13 @@
   const setMenu = open => { menu.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', open); $('.ic', menuBtn).textContent = open ? 'close' : 'menu'; };
   menuBtn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
   menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  // Services dropdown
+  const dd = $('.dd'), ddBtn = $('.dd-btn');
+  const setDd = open => { dd.classList.toggle('open', open); ddBtn.setAttribute('aria-expanded', open); };
+  ddBtn.addEventListener('click', e => { e.stopPropagation(); setDd(!dd.classList.contains('open')); });
+  dd.addEventListener('click', e => { if (e.target.closest('a')) setDd(false); });
+  document.addEventListener('click', e => { if (!dd.contains(e.target)) setDd(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && dd.classList.contains('open')) { setDd(false); ddBtn.focus(); } });
   const onScroll = () => top.classList.toggle('scrolled', scrollY > 8);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 

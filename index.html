@@ -34,9 +34,14 @@
       <a href="./" class="brand" aria-label="Getklean home"><img src="brand/logo-on-blue.png" alt="Getklean · Your space, reclaimed" width="192" height="42"></a>
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span class="ic">menu</span></button>
       <nav class="menu" id="menu" aria-label="Main">
-        <a href="#book-housemaid" data-unit-link="housemaid">Housemaid On-Demand</a>
-        <a href="#book-aircon" data-unit-link="aircon">Aircon Cleaning</a>
-        <a href="#book-deep" data-unit-link="deep">Deep Cleaning</a>
+        <div class="dd">
+          <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-services">Services <span class="ic">expand_more</span></button>
+          <div class="dd-menu" id="dd-services">
+            <a href="#book-housemaid" data-unit-link="housemaid"><span class="ic">cleaning_services</span><span><b>Housemaid On-Demand</b><small>Half or whole day, from PHP510</small></span></a>
+            <a href="#book-aircon" data-unit-link="aircon"><span class="ic">ac_unit</span><span><b>Aircon Cleaning</b><small>All unit types, from PHP970</small></span></a>
+            <a href="#book-deep" data-unit-link="deep"><span class="ic">sanitizer</span><span><b>Deep Cleaning</b><small>Offices, restaurants, Airbnbs</small></span></a>
+          </div>
+        </div>
         <a href="#reviews" data-sec-link="reviews">Reviews</a>
         <a class="btn ghost" href="app/#/sign-in">Sign in</a>
         <a class="btn yellow" href="#book">Book now</a>
@@ -62,7 +67,7 @@
           <div class="svc-tabs" role="tablist" aria-label="Choose a service">
             <button class="svc on" role="tab" aria-selected="true" aria-controls="f-housemaid" id="t-housemaid" data-svc="housemaid"><span class="svc-ic"><span class="ic">cleaning_services</span></span><b>Housemaid On-Demand</b></button>
             <button class="svc" role="tab" aria-selected="false" aria-controls="f-aircon" id="t-aircon" data-svc="aircon" tabindex="-1"><span class="svc-ic"><span class="ic">ac_unit</span></span><b>Aircon Cleaning</b></button>
-            <button class="svc" role="tab" aria-selected="false" aria-controls="f-deep" id="t-deep" data-svc="deep" tabindex="-1"><span class="svc-ic"><span class="ic">mop</span></span><b>Deep Cleaning</b></button>
+            <button class="svc" role="tab" aria-selected="false" aria-controls="f-deep" id="t-deep" data-svc="deep" tabindex="-1"><span class="svc-ic"><span class="ic">sanitizer</span></span><b>Deep Cleaning</b></button>
           </div>
 
           <form class="svc-form" id="f-housemaid" role="tabpanel" aria-labelledby="t-housemaid" data-svc="housemaid" novalidate>
@@ -453,7 +458,7 @@
       <div class="cs-head"><b>Call a hotline</b><button class="cs-x" aria-label="Close"><span class="ic">close</span></button></div>
       <a href="tel:+639674753848"><span class="ic">cleaning_services</span><span><small>Housemaid On-Demand</small>(0967) 475-3848</span></a>
       <a href="tel:+639317288845"><span class="ic">ac_unit</span><span><small>Aircon Cleaning</small>(0931) 728-8845</span></a>
-      <a href="tel:+639674753848"><span class="ic">mop</span><span><small>Deep &amp; Professional Cleaning</small>(0967) 475-3848</span></a>
+      <a href="tel:+639674753848"><span class="ic">sanitizer</span><span><small>Deep &amp; Professional Cleaning</small>(0967) 475-3848</span></a>
     </div>
   </div>
 
