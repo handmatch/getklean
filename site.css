@@ -447,3 +447,9 @@ ul, ol { padding: 0; list-style: none; }
 .stats.one div { flex-direction: row; align-items: baseline; gap: 14px; flex-wrap: wrap; justify-content: center; }
 .stats.one b { font-size: clamp(32px, 4vw, 48px); }
 .stats.one span { font-size: 18px; }
+.stats.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stats.three > div + div { border-left: 1px solid rgba(255,255,255,.15); padding-left: 32px; }
+@media (max-width: 700px) {
+  .stats.three { grid-template-columns: 1fr; gap: 18px; }
+  .stats.three > div + div { border-left: 0; padding-left: 0; border-top: 1px solid rgba(255,255,255,.15); padding-top: 18px; }
+}
