@@ -48,7 +48,7 @@ export function footer() {
   return `<footer class="gk-foot"><div class="gk-wrap gk-foot-in">
       <div class="gk-foot-brand">
         <img src="assets/logo-yellow.svg" alt="Getklean" width="192" height="41">
-        <p>Housemaids, aircon cleaning and deep cleaning for homes and businesses. Unit 803 Quadrillion Mansion, M. Paterno St., San Juan, Metro Manila.</p>
+        <p>Housemaids, aircon cleaning and deep cleaning for homes and businesses. Unit 804 Quadrillion Mansion, M. Paterno St., San Juan, Metro Manila.</p>
         <a class="gk-btn yellow" href="https://m.me/getklean.housemaids" target="_blank" rel="noopener">${icon('chat')} Chat on Messenger</a>
       </div>
       <nav aria-label="Services"><p>Services</p><a href="#/book/when">Housemaid On-Demand</a><a href="../#book-aircon">Aircon Cleaning</a><a href="../#book-deep">Deep Cleaning</a><a href="#/book/plan">Flexi Plans</a><a href="../about">About Getklean</a></nav>
