@@ -427,3 +427,11 @@ ul, ol { padding: 0; list-style: none; }
 #reviews { border-top: 1px solid var(--line); }
 #reviews .reviews figure { border: 2px solid var(--line); box-shadow: none; }
 #clients .cl { background: var(--white); border-color: var(--cream); }
+
+/* Clients & partners: plain logo wall */
+.logos { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 16px; margin-top: 48px; }
+.logos li { background: var(--white); border-radius: var(--r); aspect-ratio: 3 / 2; display: grid; place-items: center; padding: 18px; }
+.logos img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.logo-fb { font-weight: 800; color: var(--navy); text-align: center; }
+@media (max-width: 1080px) { .logos { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; } .logos li { padding: 12px; } }
