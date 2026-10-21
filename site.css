@@ -443,3 +443,7 @@ ul, ol { padding: 0; list-style: none; }
 .logos img { display: block; width: auto; height: auto; max-width: 100%; max-height: 72px; object-fit: contain; }
 @media (max-width: 1080px) { .logos { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 @media (max-width: 700px) { .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 20px; } .logos li { height: 72px; } .logos img { max-height: 56px; } }
+.stats.one { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+.stats.one div { flex-direction: row; align-items: baseline; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.stats.one b { font-size: clamp(32px, 4vw, 48px); }
+.stats.one span { font-size: 18px; }
