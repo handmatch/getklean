@@ -689,3 +689,60 @@ ul, ol { padding: 0; list-style: none; }
 .hs-k { color: var(--ink-2); }
 .hs-n, .hs-steps li:nth-child(2) .hs-n, .hs-steps li:nth-child(3) .hs-n { background: none; color: var(--navy); border: 1.5px solid var(--line); font-weight: 700; font-size: 13px; width: 28px; height: 28px; }
 .hs-steps b { font-weight: 700; }
+
+/* ===== About page ===== */
+.menu > a.active { background: rgba(255,255,255,.16); }
+.about-hero { padding-bottom: 0; }
+.about-hero .display.sm { margin-top: 8px; }
+.about-hero .lead { max-width: 60ch; }
+.video-ph { position: relative; margin-top: 40px; aspect-ratio: 16 / 9; border-radius: 22px; background: repeating-linear-gradient(135deg, #0e3b65 0 22px, #123f6b 22px 44px); border: 2px dashed rgba(255,255,255,.35); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; color: rgba(255,255,255,.8); padding: 24px; box-shadow: 0 24px 50px rgba(14,59,101,.3); }
+.video-ph .ph-tag { position: absolute; top: 18px; left: 18px; background: var(--yellow); color: var(--navy); }
+.vp-play { width: 84px; height: 84px; border-radius: 50%; background: var(--yellow); color: var(--navy); display: grid; place-items: center; }
+.vp-play .ic { font-size: 48px; }
+.video-ph .ph-t { color: var(--white); }
+.video-ph .ph-s { color: rgba(255,255,255,.7); }
+.about-hero .stats { margin-top: 40px; }
+.story { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; }
+.story-copy { display: flex; flex-direction: column; gap: 16px; font-size: 18px; color: var(--ink-2); line-height: 1.65; }
+.units3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 40px; }
+.u3 { background: var(--white); border-radius: var(--r); padding: 28px; text-decoration: none; color: var(--navy); display: flex; flex-direction: column; gap: 10px; border: 2px solid transparent; transition: border-color .15s, transform .15s; }
+.u3:hover { border-color: var(--blue); transform: translateY(-2px); }
+.u3-ic { width: 52px; height: 52px; border-radius: 14px; background: var(--yellow); display: grid; place-items: center; }
+.u3-ic .ic { font-size: 28px; }
+.u3 b { font-weight: 800; font-size: 20px; }
+.u3 p { color: var(--ink-2); flex: 1; }
+.u3-go { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--blue); }
+.u3-go .ic { font-size: 18px; }
+.about-photo { margin: 40px 0 0; }
+.about-photo img { width: 100%; max-height: 520px; object-fit: cover; border-radius: 22px; }
+.team { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 40px; }
+.team li { display: flex; flex-direction: column; gap: 4px; }
+.tm-ph { position: relative; aspect-ratio: 4 / 5; border-radius: var(--r); background: repeating-linear-gradient(135deg, #f4f7fa 0 16px, #eef2f6 16px 32px); border: 2px dashed #b7c4d3; display: grid; place-items: center; margin-bottom: 10px; }
+.tm-ph > .ic { font-size: 56px; color: #9fb0c3; }
+.tm-ph .ph-tag { position: absolute; top: 10px; left: 10px; }
+.team b { font-weight: 800; font-size: 17px; }
+.team small { color: var(--ink-2); }
+.visit { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.visit .btn { margin-top: 28px; }
+.visit-lines { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.visit-lines a { display: flex; flex-direction: column; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: var(--r); padding: 18px 20px; color: var(--white); text-decoration: none; font-weight: 800; font-size: 19px; }
+.visit-lines a:hover { border-color: var(--yellow); }
+.visit-lines small { font-weight: 500; font-size: 12.5px; opacity: .7; }
+@media (max-width: 900px) {
+  .story, .visit { grid-template-columns: 1fr; gap: 20px; }
+  .units3 { grid-template-columns: 1fr; }
+  .team { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .video-ph { margin-top: 24px; border-radius: 16px; }
+  .vp-play { width: 60px; height: 60px; } .vp-play .ic { font-size: 34px; }
+  .video-ph .ph-s { font-size: 12px; }
+  .story-copy { font-size: 16px; }
+  .units3 { margin-top: 24px; gap: 10px; }
+  .u3 { padding: 18px; }
+  .about-photo { margin-top: 24px; }
+  .team { gap: 12px; margin-top: 24px; }
+  .visit-lines { grid-template-columns: 1fr; }
+  .visit-lines a { font-size: 17px; padding: 14px 16px; }
+  .visit .btn { width: 100%; }
+}

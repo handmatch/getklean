@@ -18,12 +18,22 @@
   const onScroll = () => top.classList.toggle('scrolled', scrollY > 8);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
+  // ---------- Hotline sheet (mobile "Call us") ----------
+  const fab = $('.call-fab'), sheet = $('#call-sheet');
+  const closeSheet = () => { sheet.hidden = true; fab.focus(); };
+  fab.addEventListener('click', () => { sheet.hidden = false; $('a', sheet).focus(); });
+  sheet.addEventListener('click', e => { if (e.target === sheet || e.target.closest('.cs-x')) closeSheet(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) closeSheet(); });
+  const yr = $('#yr'); if (yr) yr.textContent = new Date().getFullYear();
+
+  // Everything below only applies to the main page (it has the service finder).
+  if (!$('#book')) return;
+
   // ---------- Dates ----------
   const z = n => String(n).padStart(2, '0');
   const iso = d => `${d.getFullYear()}-${z(d.getMonth() + 1)}-${z(d.getDate())}`;
   const now = new Date(), today = iso(now);
   const tomorrow = iso(new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1));
-  $('#yr').textContent = now.getFullYear();
   const dateInput = $('#f-housemaid [name=when]');
   dateInput.min = today; dateInput.value = tomorrow;
 
@@ -123,10 +133,4 @@
   // Bottom bar "Book now": jump to the form of the business you're viewing
   $('.mb-book')?.addEventListener('click', e => { e.preventDefault(); scrollToFinder(); });
 
-  // ---------- Hotline sheet (mobile "Call us") ----------
-  const fab = $('.call-fab'), sheet = $('#call-sheet');
-  const closeSheet = () => { sheet.hidden = true; fab.focus(); };
-  fab.addEventListener('click', () => { sheet.hidden = false; $('a', sheet).focus(); });
-  sheet.addEventListener('click', e => { if (e.target === sheet || e.target.closest('.cs-x')) closeSheet(); });
-  addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) closeSheet(); });
 })();
