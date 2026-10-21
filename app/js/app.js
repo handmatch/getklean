@@ -65,6 +65,12 @@ function render() {
 }
 
 document.addEventListener('click', e => {
+  const menuBtn = e.target.closest('[data-action="menu"]');
+  if (menuBtn) { const n = document.getElementById('nav'); const o = n.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); menuBtn.querySelector('.ic').textContent = o ? 'close' : 'menu'; return; }
+  const ddBtn = e.target.closest('[data-action="dd"]');
+  const dd = document.querySelector('.gk-dd');
+  if (ddBtn) { const o = dd.classList.toggle('open'); ddBtn.setAttribute('aria-expanded', o); return; }
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
   if (e.target.closest('[data-action="signout"]')) { setUser(null); resetBooking(); toast('You’re signed out.'); go('/'); }
 });
 window.addEventListener('hashchange', render);

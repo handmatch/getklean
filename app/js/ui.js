@@ -12,47 +12,55 @@ export const logo = (variant = 'blue') => img(
   variant === 'white' ? 'assets/logo-white.svg' : 'assets/logo.svg', 'GetKlean',
   '', `<span class="wordmark">GET<b>KLEAN</b></span>`);
 
-// ---------- Nav ----------
-export function nav(active = 'Home') {
+// ---------- Nav (same header as the main site) ----------
+const HOTLINES = [['Housemaid', '(0967) 475-3848', '+639674753848'], ['Aircon', '(0931) 728-8845', '+639317288845'], ['Deep cleaning', '(0967) 475-3848', '+639674753848']];
+export function nav() {
   const u = user();
-  const items = u
-    ? [['Home', '#/'], ['My Bookings', '#/'], ['Rewards', '#/'], ['Membership', '#/book/plan'], ['Help', '#/']]
-    : [['Home', '#/'], ['Membership', '#/book/plan'], ['Help', '#/']];
-  return `<header class="nav" id="nav">
-    <a class="logo" href="#/" aria-label="GetKlean home">${logo()}</a>
-    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">${icon('menu')}</button>
-    <nav class="nav-items" aria-label="Main">
-      ${items.map(([l, h]) => `<a class="nav-item ${l === active ? 'active' : ''}" href="${h}">${l}</a>`).join('')}
-      <div class="nav-cta">
-        <a class="btn contained sm flat" href="#/book/when">${u ? 'Book a Housemaid' : 'Find a housemaid'}</a>
-        ${u
-          ? `<button class="nav-avatar" title="${esc(u.name)} · Sign out" data-action="signout">${esc(initials(u.name))}</button>`
-          : `<a class="btn outlined sm" href="#/sign-in">Sign in</a>`}
-      </div>
-    </nav>
-  </header>`;
+  return `<div class="gk-hot" role="region" aria-label="Hotlines"><div class="gk-wrap gk-hot-in">
+      <span class="gk-hot-lbl">${icon('call', 'fill')}Hotlines</span>
+      ${HOTLINES.map(([l, n, t]) => `<span>${l} <a href="tel:${t}">${n}</a></span>`).join('')}
+      <a class="gk-hot-mail" href="mailto:sales@getkleanph.com">sales@getkleanph.com</a>
+    </div></div>
+    <header class="gk-top" id="nav"><div class="gk-wrap gk-top-in">
+      <a class="gk-brand" href="../" aria-label="Getklean home"><img src="assets/logo-white.svg" alt="Getklean · Your space, reclaimed" width="192" height="41"></a>
+      <button class="gk-menu-btn" aria-label="Menu" aria-expanded="false" data-action="menu">${icon('menu')}</button>
+      <nav class="gk-menu" aria-label="Main">
+        <div class="gk-dd">
+          <button class="gk-dd-btn" type="button" aria-expanded="false" data-action="dd">Services ${icon('expand_more')}</button>
+          <div class="gk-dd-menu">
+            <a href="#/book/when" class="active">${icon('cleaning_services')}<span><b>Housemaid On-Demand</b><small>Half or whole day, from PHP510</small></span></a>
+            <a href="../#book-aircon">${icon('ac_unit')}<span><b>Aircon Cleaning</b><small>All unit types, from PHP970</small></span></a>
+            <a href="../#book-deep">${icon('sanitizer')}<span><b>Deep Cleaning</b><small>Offices, restaurants, Airbnbs</small></span></a>
+          </div>
+        </div>
+        <a href="../about">About</a>
+        ${u ? `<a href="#/">My bookings</a>` : ''}
+        ${u ? `<button class="gk-avatar" title="${esc(u.name)} · Sign out" data-action="signout">${esc(initials(u.name))}</button>`
+            : `<a class="gk-btn ghost" href="#/sign-in">Sign in</a>`}
+        <a class="gk-btn yellow" href="#/book/when">Book now</a>
+      </nav>
+    </div></header>`;
 }
 export const initials = name => name.split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
 
-// ---------- Footer ----------
+// ---------- Footer (same as the main site) ----------
 export function footer() {
-  const col = (title, links) => `<div class="footer-col"><p class="overline">${title}</p>${links.map(l => `<a href="#/">${l}</a>`).join('')}</div>`;
-  return `<footer class="footer">
-    <div class="footer-cols">
-      <div class="footer-brand">
-        <a href="#/" style="width:180px;height:40px">${logo('white')}</a>
-        <p class="body2">Trusted, insured housemaids, aircon and home cleaning in Metro Manila.</p>
-        <a class="btn yellow md" href="https://m.me/getklean.housemaids" target="_blank" rel="noopener">Chat on Messenger</a>
+  return `<footer class="gk-foot"><div class="gk-wrap gk-foot-in">
+      <div class="gk-foot-brand">
+        <img src="assets/logo-yellow.svg" alt="Getklean" width="192" height="41">
+        <p>Housemaids, aircon cleaning and deep cleaning for homes and businesses. Unit 803 Quadrillion Mansion, M. Paterno St., San Juan, Metro Manila.</p>
+        <a class="gk-btn yellow" href="https://m.me/getklean.housemaids" target="_blank" rel="noopener">${icon('chat')} Chat on Messenger</a>
       </div>
-      ${col('Services', ['Housemaid on-demand', 'Aircon cleaning', 'Deep cleaning', 'Flexi plans'])}
-      ${col('Help', ['How it works', 'FAQs', 'Contact us', 'Service areas'])}
-      <div class="footer-col"><p class="overline">Hotlines</p>
-        <a href="tel:+639674753848">Housemaid (0967) 475-3848</a>
-        <a href="tel:+639317288845">Aircon (0931) 728-8845</a>
-        <a href="mailto:sales@getkleanph.com">sales@getkleanph.com</a></div>
-      ${col('Company', ['About GetKlean', 'Terms', 'Privacy'])}
+      <nav aria-label="Services"><p>Services</p><a href="#/book/when">Housemaid On-Demand</a><a href="../#book-aircon">Aircon Cleaning</a><a href="../#book-deep">Deep Cleaning</a><a href="#/book/plan">Flexi Plans</a><a href="../about">About Getklean</a></nav>
+      <nav aria-label="Follow us"><p>Follow us</p><a href="https://www.facebook.com/getklean.housemaids" target="_blank" rel="noopener">Facebook · Housemaids</a><a href="https://www.facebook.com/getkleanaircon" target="_blank" rel="noopener">Facebook · Aircon</a><a href="https://www.facebook.com/getkleanhomecleaning" target="_blank" rel="noopener">Facebook · Deep Cleaning</a><a href="https://www.instagram.com/getkleanofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@getkleanofficial" target="_blank" rel="noopener">TikTok</a></nav>
+      <div class="gk-foot-hot"><p>Hotlines</p>
+        <a href="tel:+639674753848"><small>Housemaid On-Demand</small>(0967) 475-3848</a>
+        <a href="tel:+639317288845"><small>Aircon Cleaning</small>(0931) 728-8845</a>
+        <a href="tel:+639674753848"><small>Deep &amp; Professional Cleaning</small>(0967) 475-3848</a>
+        <a href="mailto:sales@getkleanph.com"><small>Email</small>sales@getkleanph.com</a>
+      </div>
     </div>
-    <div class="legal">© 2026 GetKleanPH. All rights reserved.</div>
+    <div class="gk-wrap gk-legal">© ${new Date().getFullYear()} GetKleanPH. All rights reserved.</div>
   </footer>`;
 }
 
@@ -133,7 +141,7 @@ export function summary() {
     row('event', 'Date', v, s.when === 'later' && s.type === 'recurring' && s.endDate ? `${fmt.med(s.date)} – ${fmt.med(s.endDate)}` : '');
   }
   if (s.time) row('schedule', 'Time', `${durationLabel(s.duration)}${dot()}${s.time} - ${endTime(s.time, s.duration)}`, durationDetail(s.duration));
-  if (s.address) row('location_on', 'Service Address', esc(s.address.label || 'Address'), esc(addressLine(s.address)));
+  if (s.address) s.address.label ? row('location_on', 'Service Address', esc(s.address.label), esc(addressLine(s.address))) : row('location_on', 'Service Area', esc(addressLine(s.address)));
   if (s.housemaid) {
     const h = HOUSEMAIDS.find(x => x.id === s.housemaid);
     if (h) row('woman', 'Preferred Housemaid', `${esc(shortName(h.name))}${dot()}${icon('star', 's15 fill star')} ${h.rating}${dot()}<span class="lnk">${h.booked ? h.booked + ' booking' + (h.booked > 1 ? 's' : '') + ' with you' : 'New to you'}</span>`);
@@ -161,7 +169,7 @@ export function addressLine(a) {
 
 // ---------- Page shells ----------
 export function bookingPage({ step, title, subtitle = '', body, aside = summary() }) {
-  return `<div class="page">${nav('Home')}${stepper(step)}
+  return `<div class="page">${nav()}${stepper(step)}
     <main>
       <div class="wrap book-head"><h1 class="h4">${title}</h1>${subtitle ? `<p class="body1">${subtitle}</p>` : ''}</div>
       <div class="wrap book-body"><div class="book-main">${body}</div><div class="book-side">${aside}</div></div>

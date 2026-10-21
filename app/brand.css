@@ -1,0 +1,238 @@
+/* Getklean brand layer for the booking app.
+   Loaded after styles.css: re-skins the Figma (MUI) flow with the 2026 brand guidelines
+   (blue #3886c8, yellow #f6e535, navy #0e3b65, cream #f9e8c0; Gotham → Montserrat) so it matches the main site. */
+:root {
+  --primary: #3886c8;
+  --primary-dark: #2f74ae;
+  --primary-border: rgba(56, 134, 200, .5);
+  --secondary: #f6e535;
+  --secondary-dark: #e9d71c;
+  --secondary-contrast: #0e3b65;
+  --navy: #0e3b65;
+  --cream: #fdf6e3;
+  --blue-50: #eaf3fb;
+  --blue-100: #cfe6f6;
+  --bluegrey-50: #f1f5f9;
+  --bluegrey-100: #dde5ee;
+  --bluegrey-800: #0e3b65;
+  --text: #0e3b65;
+  --text-2: #44617f;
+  --link: #2f74ae;
+  --divider: #dde5ee;
+  --input-border: #c7d3e0;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --elev-1: 0 2px 10px rgba(14, 59, 101, .06);
+  --elev-2: 0 6px 18px rgba(14, 59, 101, .12);
+  --font: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --page-x: max(32px, calc((100vw - 1200px) / 2 + 32px));
+}
+body { font-family: var(--font); font-weight: 400; color: var(--text); background: #f7f9fc; }
+.page > main { background: #f7f9fc; }
+
+/* Type: brand headlines are heavy */
+.h4 { font-weight: 900; letter-spacing: -.025em; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.08; color: var(--navy); }
+.h5 { font-weight: 800; letter-spacing: -.01em; font-size: 22px; color: var(--navy); }
+.h6 { font-weight: 800; font-size: 18px; color: var(--navy); }
+.body1, .body2 { font-weight: 400; }
+.overline, .overline-sm { font-weight: 800; letter-spacing: .12em; color: var(--primary); }
+.muted { color: var(--text-2); }
+.lnk, .link { color: var(--link); font-weight: 600; }
+
+/* Buttons: brand pill buttons */
+.btn { border-radius: 999px; font-weight: 700; letter-spacing: 0; transition: transform .15s, background-color .15s; }
+.btn:hover { transform: translateY(-1px); }
+.btn.lg { padding: 13px 26px; font-size: 15px; line-height: 22px; }
+.btn.md { padding: 9px 18px; }
+.btn.contained { background: var(--navy); box-shadow: none; }
+.btn.contained:hover { background: #0a2e50; }
+.btn.yellow { background: var(--secondary); color: var(--navy); box-shadow: none; }
+.btn.outlined { color: var(--navy); border: 1.5px solid var(--bluegrey-100); background: #fff; }
+.btn.outlined:hover { border-color: var(--primary); background: #fff; }
+.btn.text { color: var(--primary); }
+.btn:disabled { background: #e3e9f0; color: #8aa0b6; transform: none; }
+.btn.warning { background: #ed6c02; border-radius: 999px; }
+.btn:focus-visible, .radio-card:focus-within, .chip:focus-visible { outline: 3px solid var(--secondary); outline-offset: 2px; }
+
+/* ---------- Header (same as main site) ---------- */
+.gk-wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+.gk-hot { background: var(--navy); color: rgba(255,255,255,.85); font-size: 13px; }
+.gk-hot-in { display: flex; align-items: center; gap: 8px 24px; min-height: 38px; flex-wrap: wrap; }
+.gk-hot a { color: var(--secondary); font-weight: 700; text-decoration: none; }
+.gk-hot-lbl { display: inline-flex; align-items: center; gap: 6px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; font-size: 11px; color: #fff; }
+.gk-hot-lbl .ic { font-size: 16px; color: var(--secondary); }
+.gk-hot-mail { margin-left: auto; color: rgba(255,255,255,.85) !important; font-weight: 500 !important; }
+.gk-top { background: var(--primary); position: sticky; top: 0; z-index: 30; box-shadow: 0 6px 20px rgba(14,59,101,.12); }
+.gk-top-in { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 24px; position: relative; }
+.gk-brand img { height: 42px; width: auto; display: block; }
+.gk-menu { display: flex; align-items: center; gap: 4px; }
+.gk-menu > a:not(.gk-btn) { color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 12px; border-radius: 8px; }
+.gk-menu > a:not(.gk-btn):hover { background: rgba(255,255,255,.12); }
+.gk-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 999px; padding: 10px 20px; font: 700 15px/1.2 var(--font); text-decoration: none; cursor: pointer; white-space: nowrap; margin-left: 8px; }
+.gk-btn .ic { font-size: 20px; }
+.gk-btn.yellow { background: var(--secondary); color: var(--navy); }
+.gk-btn.ghost { color: #fff; box-shadow: inset 0 0 0 2px rgba(255,255,255,.7); }
+.gk-avatar { width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--secondary); color: var(--navy); font: 800 14px var(--font); cursor: pointer; margin-left: 8px; }
+.gk-menu-btn { display: none; background: none; border: 0; color: #fff; padding: 8px; cursor: pointer; }
+.gk-dd { position: relative; }
+.gk-dd-btn { display: inline-flex; align-items: center; gap: 2px; background: none; border: 0; color: #fff; font: 600 15px/1.2 var(--font); padding: 8px 8px 8px 12px; border-radius: 8px; cursor: pointer; }
+.gk-dd-btn:hover, .gk-dd.open .gk-dd-btn { background: rgba(255,255,255,.12); }
+.gk-dd-btn .ic { font-size: 20px; transition: transform .15s; }
+.gk-dd.open .gk-dd-btn .ic { transform: rotate(180deg); }
+.gk-dd-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; min-width: 300px; background: #fff; border-radius: 14px; padding: 8px; box-shadow: 0 18px 40px rgba(14,59,101,.25); z-index: 35; }
+.gk-dd.open .gk-dd-menu { display: block; }
+.gk-dd-menu a { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; color: var(--navy); text-decoration: none; }
+.gk-dd-menu a:hover, .gk-dd-menu a.active { background: var(--blue-50); }
+.gk-dd-menu a > .ic { width: 38px; height: 38px; border-radius: 10px; background: var(--secondary); display: grid; place-items: center; font-size: 20px; flex: none; }
+.gk-dd-menu b { display: block; font-weight: 800; font-size: 15px; }
+.gk-dd-menu small { display: block; font-size: 12.5px; color: var(--text-2); }
+
+/* ---------- Footer (same as main site) ---------- */
+.gk-foot { background: var(--navy); color: #fff; padding: 64px 0 28px; }
+.gk-foot-in { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; }
+.gk-foot-brand { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.gk-foot-brand img { height: 42px; width: auto; }
+.gk-foot-brand p { opacity: .8; font-size: 14px; line-height: 1.6; max-width: 34ch; }
+.gk-foot-brand .gk-btn { margin-left: 0; }
+.gk-foot nav { display: flex; flex-direction: column; gap: 10px; }
+.gk-foot nav p, .gk-foot-hot > p { font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; color: var(--secondary); margin-bottom: 6px; }
+.gk-foot nav a { color: #fff; text-decoration: none; opacity: .85; font-size: 15px; }
+.gk-foot nav a:hover { opacity: 1; text-decoration: underline; }
+.gk-foot-hot { display: flex; flex-direction: column; gap: 12px; }
+.gk-foot-hot a { display: flex; flex-direction: column; text-decoration: none; font-weight: 800; font-size: 17px; color: #fff; }
+.gk-foot-hot a small { font-weight: 500; font-size: 12px; opacity: .7; }
+.gk-legal { margin-top: 48px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.15); font-size: 13px; opacity: .7; }
+
+/* ---------- Stepper ---------- */
+.stepper { background: #fff; border-bottom: 1px solid var(--divider); }
+.step { font-weight: 600; color: var(--text-2); }
+.step .num { background: #fff; color: var(--text-2); border: 1.5px solid var(--bluegrey-100); font-weight: 700; width: 28px; height: 28px; }
+.step.on { color: var(--navy); font-weight: 800; }
+.step.on .num { background: var(--navy); border-color: var(--navy); color: #fff; }
+.step.done .num { background: var(--primary); border-color: var(--primary); color: #fff; }
+.step.done { color: var(--navy); }
+.connector { background: var(--bluegrey-100); }
+
+/* ---------- Booking pages ---------- */
+.book-head { padding-top: 40px; padding-bottom: 20px; }
+.book-head .body1 { color: var(--text-2); }
+.form-card { border: 1px solid var(--bluegrey-100); border-radius: var(--radius-lg); box-shadow: var(--elev-1); background: #fff; }
+.field > .label { font-weight: 700; font-size: 15px; }
+.radio-card { border: 1.5px solid var(--bluegrey-100); border-radius: 14px; }
+.radio-card:hover { border-color: var(--primary); }
+.radio-card.checked { background: var(--blue-50); border-color: var(--primary); }
+.radio-card .rc-label { color: var(--navy); font-weight: 700; font-size: 15px; }
+.radio-card .rc-caption { color: var(--text-2); font-size: 13px; }
+.radio-dot::before { border-color: #9fb3c8; }
+.radio-card.checked .radio-dot::before { border-color: var(--primary); background: radial-gradient(circle, var(--primary) 0 5px, transparent 5.5px); }
+.rc-icon { background: var(--secondary); color: var(--navy); }
+.radio-card.checked .rc-icon { background: #fff; color: var(--primary); }
+.check-card.checked .check-box .ic { background: var(--primary); border-color: var(--primary); }
+.checkbox input:checked + .cb .ic { background: var(--primary); border-color: var(--primary); }
+.icon-bubble { background: var(--blue-50); color: var(--primary); }
+.date-display { border-radius: 14px; border: 1.5px solid var(--bluegrey-100); }
+
+.chip { border: 1.5px solid var(--bluegrey-100); font-weight: 600; color: var(--navy); }
+.chip.on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.chip:hover { background: var(--blue-50); }
+.chip.on:hover { background: var(--navy); }
+.day { border: 1.5px solid var(--bluegrey-100); font-weight: 600; color: var(--navy); }
+.day.on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.seg { border-color: var(--bluegrey-100); border-radius: 999px; }
+.seg button { font-weight: 700; color: var(--text-2); }
+.seg button.on { background: var(--navy); color: #fff; }
+.seg.chips-seg button { border: 1.5px solid var(--bluegrey-100); font-weight: 600; }
+.seg.chips-seg button.on { background: var(--navy); border-color: var(--navy); }
+
+.info { background: var(--blue-50); border-radius: 12px; color: var(--navy); }
+.alert-error { border-radius: 12px; }
+.tf-box { border-radius: 12px; border: 1.5px solid var(--input-border); }
+.tf-box:hover { border-color: var(--primary); }
+.tf-box:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(56,134,200,.15); }
+.tf label { color: var(--text-2); font-weight: 500; }
+.tf input, .tf select, .tf textarea { color: var(--navy); font-weight: 500; }
+.otp-box { border-radius: 12px; border: 1.5px solid var(--input-border); color: var(--navy); font-weight: 800; }
+
+.tag { font-weight: 700; font-size: 12px; }
+.tag.yellow { background: var(--secondary); color: var(--navy); }
+.tag.info { background: var(--primary); }
+.tag.primary-solid { background: var(--navy); }
+
+/* Summary card */
+.summary { border-radius: var(--radius-lg); border: 1px solid var(--bluegrey-100); box-shadow: var(--elev-1); }
+.summary > .h6 { font-weight: 900; }
+.sum-row .bubble { background: var(--blue-50); color: var(--primary); }
+.sum-row .k { color: var(--text-2); text-transform: uppercase; letter-spacing: .08em; font-size: 11px; font-weight: 800; }
+.sum-row .k.lg { font-size: 11px; }
+.sum-row .v { font-weight: 600; color: var(--navy); }
+.total { background: var(--navy); color: #fff; border-radius: 12px; }
+.total .amt { color: var(--secondary); font-weight: 900; }
+.price-line .free { color: #2e7d32; }
+.sum-help b { color: var(--primary); }
+
+/* Housemaid cards */
+.maid { border-radius: 16px; border: 1.5px solid var(--bluegrey-100); }
+.maid.selected { border-color: var(--primary); background: var(--blue-50); box-shadow: none; }
+.maid-photo { background: var(--secondary); }
+.maid-info .nm { font-weight: 800; color: var(--navy); }
+.maid-warn { border-radius: 12px; }
+.info-panel { border-radius: 16px; background: #fff; border: 1px solid var(--bluegrey-100); }
+.switch-card { border-radius: 16px; background: #fff; }
+.empty-fav { border-radius: 12px; }
+
+/* Plan step */
+.pc-price b, .plan-price b { font-weight: 900; color: var(--navy); }
+.acc { border-radius: 14px; border-color: var(--bluegrey-100); }
+.rate-row { border-radius: 10px; }
+.example { border-radius: 16px; }
+.ex-col { border-radius: 14px; }
+.ex-total.grey { background: var(--bluegrey-50); }
+
+/* Review, pay, booked */
+.review-card { border-radius: 16px; background: #fff; border: 1px solid var(--bluegrey-100); }
+.overline-sm { font-size: 11px; }
+.protect { border-radius: 16px; background: #fff; border: 1px solid var(--bluegrey-100); }
+.shield { background: var(--secondary); color: var(--navy); }
+.confirm { border-radius: 20px; background: #fff; box-shadow: var(--elev-1); }
+.confirm .h5 { font-weight: 900; font-size: 26px; }
+.next { border-radius: 14px; background: var(--cream); }
+
+/* Signed-in app home + login */
+.quick-book { border-radius: var(--radius-lg); background: #fff; }
+.next-booking, .voucher { border-radius: 16px; background: #fff; }
+.deals { background: var(--cream); }
+.deal-trial { background: var(--primary); border-radius: 16px; }
+.promo { background: var(--navy); border-radius: 16px; }
+.login-card .icon-bubble.lg { background: var(--secondary); color: var(--navy); }
+
+/* Toast */
+.toast { background: var(--navy); border-radius: 12px; font-weight: 600; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  .gk-menu-btn { display: block; }
+  .gk-menu { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--primary); flex-direction: column; align-items: stretch; padding: 8px 20px 20px; box-shadow: 0 12px 24px rgba(14,59,101,.2); }
+  .gk-top.open .gk-menu { display: flex; }
+  .gk-menu > a:not(.gk-btn) { padding: 12px 8px; font-size: 16px; }
+  .gk-btn, .gk-avatar { margin: 8px 0 0; }
+  .gk-dd-btn { width: 100%; justify-content: space-between; padding: 12px 8px; font-size: 16px; }
+  .gk-dd-menu { position: static; min-width: 0; box-shadow: none; margin: 4px 0 8px; }
+}
+@media (max-width: 900px) {
+  .gk-hot { display: none; }
+  .gk-foot-in { grid-template-columns: 1fr 1fr; }
+  .gk-foot-brand, .gk-foot-hot { grid-column: 1 / -1; }
+  :root { --page-x: 16px; }
+}
+@media (max-width: 700px) {
+  .gk-wrap { padding: 0 16px; }
+  .gk-top-in { height: 60px; }
+  .gk-menu { top: 60px; }
+  .gk-brand img { height: 32px; }
+  .gk-foot { padding: 40px 0 24px; }
+  .gk-foot-hot { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+  .gk-foot-hot > p { grid-column: 1 / -1; }
+  .book-head { padding-top: 24px; padding-bottom: 12px; }
+  .stepper .step.on .lbl { font-size: 13px; }
+  .actions .btn.lg { flex: 1; }
+}

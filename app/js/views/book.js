@@ -592,7 +592,7 @@ function review() {
       <div class="review-list">
         ${card('SERVICE', 'Housemaid On-Demand', `${durationLabel(s.duration)}${dot()}${s.duration === 'whole' ? '8 hours (7hrs work + 1 hr break)' : '4 hours'}`, 'service')}
         ${card('DATE &amp; TIME', dateMain, s.when === 'later' && s.type === 'recurring' && s.endDate ? `${fmt.med(s.date)} – ${fmt.med(s.endDate)}` : '', 'when')}
-        ${card('ADDRESS', esc(`${s.address?.label || 'Address'}, ${addressLine(s.address)}`), esc(s.address?.landmark || ''), 'where')}
+        ${card('ADDRESS', esc([s.address?.label, addressLine(s.address)].filter(Boolean).join(', ')), esc(s.address?.landmark || ''), 'where')}
         ${card('HOUSEMAID', h ? esc(shortName(h.name)) : 'Best match', h ? `${icon('star', 's18 fill star')} ${h.rating}${dot()}${s.dispatch === 'expert' ? 'Expert dispatch' : 'Regular dispatch'}` : '', 'housemaid')}
         ${card('TASKS', esc(tasks || '—'), esc(s.instructions), 'service')}
         ${card('CONTACT', esc(u.name || ''), `${esc(u.email || '')}${dot()}+63 ${esc(u.mobile || '')}`, 'sign-in')}
@@ -690,7 +690,7 @@ function booked() {
         ${row('Housemaid', `${esc(who)}${dot()}Arrival ${arrive}`)}
         ${row('Dispatch level', s.dispatch === 'expert' ? 'Expert' : 'Regular, Expert level matched, no extra charge')}
         ${row('Plan', esc(plan))}
-        ${row('Address', esc(`${s.address?.label || ''}, ${addressLine(s.address)}`))}
+        ${row('Address', esc([s.address?.label, addressLine(s.address)].filter(Boolean).join(', ')))}
         ${row('Total paid', php(s.paid ?? total(s)))}
       </div>
       <div class="next"><p class="body1"><b>What’s next?</b></p>
