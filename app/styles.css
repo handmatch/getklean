@@ -537,3 +537,16 @@ a.step { text-decoration: none; }
 .sum-help { display: flex; align-items: center; gap: 10px; border-top: 1px solid var(--divider); padding-top: var(--s2); color: var(--text-2); font-size: 14px; text-decoration: none; }
 .sum-help .ic { color: var(--primary); }
 .sum-help b { color: var(--primary); font-weight: 600; }
+
+/* Mobile: form first, booking summary after it */
+@media (max-width: 900px) {
+  .book-body { flex-direction: column; }
+  .book-head { padding-top: var(--s4); }
+  .book-head .h4 { font-size: 26px; }
+  .stepper { padding-top: 12px; padding-bottom: 12px; }
+}
+@media (max-width: 560px) {
+  .book-main { gap: var(--s2); }
+  .summary { padding: var(--s2); }
+}
+.date-display { margin-top: 8px; }

@@ -70,7 +70,7 @@
           <form class="svc-form" id="f-housemaid" role="tabpanel" aria-labelledby="t-housemaid" data-svc="housemaid" novalidate>
             <label class="q-field"><span>Where</span><select name="where" required><option value="" selected disabled>Choose your area</option><option>Metro Manila</option><option>Bulacan</option><option>Rizal</option></select></label>
             <label class="q-field"><span>When</span><input type="date" name="when" required></label>
-            <label class="q-field"><span>How long</span><select name="dur"><option value="whole">Whole day · 8 hrs</option><option value="half">Half day · 4 hrs</option></select></label>
+            <label class="q-field"><span>How long</span><select name="dur"><option value="whole">Whole day (8h)</option><option value="half">Half day (4h)</option></select></label>
             <button class="btn navy lg" type="submit">Find a housemaid <span class="ic">arrow_forward</span></button>
             <p class="f-note">First booking on a weekday? <b>PHP650</b> instead of PHP1,200.</p>
             <a class="f-call" href="tel:+639674753848"><span class="ic fill">call</span><span>Prefer to call? <b>Housemaid hotline (0967) 475-3848</b></span></a>
@@ -411,7 +411,10 @@
     <div class="container legal">© <span id="yr">2026</span> GetKleanPH. All rights reserved. · <a href="app/#/sign-in">Sign in</a></div>
   </footer>
 
-  <button class="call-fab" aria-haspopup="dialog" aria-controls="call-sheet"><span class="ic fill">call</span>Call us</button>
+  <div class="m-bar" role="region" aria-label="Quick actions">
+    <button class="mb-call call-fab" aria-haspopup="dialog" aria-controls="call-sheet"><span class="ic fill">call</span>Call</button>
+    <a class="mb-book" href="#book"><span class="ic">event_available</span>Book now</a>
+  </div>
   <div class="call-sheet" id="call-sheet" role="dialog" aria-modal="true" aria-label="Call a hotline" hidden>
     <div class="cs-card">
       <div class="cs-head"><b>Call a hotline</b><button class="cs-x" aria-label="Close"><span class="ic">close</span></button></div>

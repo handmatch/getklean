@@ -107,6 +107,9 @@
   }));
   $$('.svc-form select').forEach(s => s.addEventListener('change', () => s.closest('.q-field').classList.remove('err')));
 
+  // Bottom bar "Book now": jump to the form of the business you're viewing
+  $('.mb-book')?.addEventListener('click', e => { e.preventDefault(); scrollToFinder(); });
+
   // ---------- Hotline sheet (mobile "Call us") ----------
   const fab = $('.call-fab'), sheet = $('#call-sheet');
   const closeSheet = () => { sheet.hidden = true; fab.focus(); };
